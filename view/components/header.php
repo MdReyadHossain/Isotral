@@ -10,7 +10,7 @@
     <meta content="" name="description">
 
     <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
+    <link href="../asset/logo/igLogo.png" rel="icon">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -43,7 +43,7 @@
 
     <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
-        <a href="index.php" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+        <a href="../" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
             <div class="d-flex flex-row align-items-center">
                 <img class="site-logo" src="../asset/logo/igLogo.png" alt="innovators gallery" height="50" width="50">
                 <div>
@@ -59,7 +59,7 @@
             <div class="navbar-nav ms-auto p-4 p-lg-0">
                 <a href="../" id="home" class="nav-item nav-link">Home</a>
                 <a href="about" id="about" class="nav-item nav-link">About</a>
-                <a href="galley" id="gallery" class="nav-item nav-link">Gallery</a>
+                <a href="gallery" id="gallery" class="nav-item nav-link">Gallery</a>
                 <a href="testimonial" id="testimonial" class="nav-item nav-link">Testimonial</a>
                 <a href="contact" id="contact" class="nav-item nav-link">Contact</a>
                 <!-- <div class="nav-item dropdown">
@@ -69,7 +69,7 @@
                     </div>
                 </div> -->
             </div>
-            <a href="" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Join Now<i class="fa fa-arrow-right ms-3"></i></a>
+            <a href="./login" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Join Now<i class="fa fa-arrow-right ms-3"></i></a>
         </div>
     </nav>
 

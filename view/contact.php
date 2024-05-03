@@ -56,7 +56,7 @@
                     </div>
                     <div class="ms-3">
                         <h5 class="text-primary">Email</h5>
-                        <p class="mb-0">info@example.com</p>
+                        <p class="mb-0">igallerybd@outlook.com</p>
                     </div>
                 </div>
             </div>
@@ -87,7 +87,7 @@
                         <div class="col-12">
                             <div class="form-floating">
                                 <textarea class="form-control" placeholder="Leave a message here" id="message" style="height: 150px"></textarea>
-                                <label for="message">Message</label>
+                                <label for="message">Write your message...</label>
                             </div>
                         </div>
                         <div class="col-12">

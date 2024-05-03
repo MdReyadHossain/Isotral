@@ -57,20 +57,19 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto p-4 p-lg-0">
-                <a href="" class="nav-item nav-link active">Home</a>
-                <a href="./view/about" class="nav-item nav-link">About</a>
-                <a href="./view/gallery" class="nav-item nav-link">Gallery</a>
-                <div class="nav-item dropdown">
+                <a href="" id="home" class="nav-item nav-link active">Home</a>
+                <a href="./view/about" id="about" class="nav-item nav-link">About</a>
+                <a href="./view/gallery" id="gallery" class="nav-item nav-link">Gallery</a>
+                <a href="./view/testimonial" id="testimonial" class="nav-item nav-link">Testimonial</a>
+                <a href="contact" id="contact" class="nav-item nav-link">Contact</a>
+                <!-- <div class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
                     <div class="dropdown-menu fade-down m-0">
-                        <a href="team.php" class="dropdown-item">Our Team</a>
-                        <a href="testimonial.php" class="dropdown-item">Testimonial</a>
-                        <a href="404.php" class="dropdown-item">404 Page</a>
+                        <a href="404" class="dropdown-item">404 Page</a>
                     </div>
-                </div>
-                <a href="./view/contact" class="nav-item nav-link">Contact</a>
+                </div> -->
             </div>
-            <a href="" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Join Now<i class="fa fa-arrow-right ms-3"></i></a>
+            <a href="./view/login" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Join Now<i class="fa fa-arrow-right ms-3"></i></a>
         </div>
     </nav>
     <!-- Navbar End -->
@@ -105,7 +104,7 @@
                                 <p class="fs-5 text-white mb-4 pb-2">Life is beautiful and it becomes more beautiful when you will create something new which opens the door of more and more new possibilities.
                                 </p>
                                 <a href="#service" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Read More</a>
-                                <a href="" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Join Now</a>
+                                <a href="./view/login" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Join Now</a>
                             </div>
                         </div>
                     </div>
@@ -122,8 +121,8 @@
                     <div class="service-item text-center pt-3">
                         <div class="p-4">
                             <i class="fa fa-3x fa-graduation-cap text-primary mb-4"></i>
-                            <h5 class="mb-3">Skilled People</h5>
-                            <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
+                            <h5 class="mb-3">Empowerment</h5>
+                            <p>Our aim is to make people skilled which they badly need to survive in the society and the whole world</p>
                         </div>
                     </div>
                 </div>
@@ -132,7 +131,7 @@
                         <div class="p-4">
                             <i class="fa fa-3x fa-globe text-primary mb-4"></i>
                             <h5 class="mb-3">Green World</h5>
-                            <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
+                            <p>Nature is always evergreen. Only creativity make your mind evergreen. So grow creativity</p>
                         </div>
                     </div>
                 </div>
@@ -141,7 +140,7 @@
                         <div class="p-4">
                             <i class="fa fa-3x fa-home text-primary mb-4"></i>
                             <h5 class="mb-3">Safe Home</h5>
-                            <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
+                            <p>Try to solve your daily problems with your creativity and save your world</p>
                         </div>
                     </div>
                 </div>
@@ -150,7 +149,7 @@
                         <div class="p-4">
                             <i class="fa fa-3x fa-book-open text-primary mb-4"></i>
                             <h5 class="mb-3">Education</h5>
-                            <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
+                            <p>There is no age for receiving education. So learn and apply in your life</p>
                         </div>
                     </div>
                 </div>
@@ -458,7 +457,7 @@
                     <h4 class="text-white mb-3">Contact</h4>
                     <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Bogura, Bangladesh</p>
                     <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
-                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>innovators@mail.com</p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>igallerybd@outlook.com</p>
                     <div class="d-flex pt-2">
                         <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
                         <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
@@ -470,22 +469,19 @@
                     <h4 class="text-white mb-3">Gallery</h4>
                     <div class="row g-2 pt-2">
                         <div class="col-4">
-                            <img class="img-fluid bg-light p-1" src="img/course-1.jpg" alt="">
+                            <img class="img-fluid bg-light p-1" src="./asset/img/gallery/gallery-1.jpg" alt="gallery-1">
                         </div>
                         <div class="col-4">
-                            <img class="img-fluid bg-light p-1" src="img/course-2.jpg" alt="">
+                            <img class="img-fluid bg-light p-1" src="./asset/img/gallery/gallery-2.jpg" alt="gallery-2">
                         </div>
                         <div class="col-4">
-                            <img class="img-fluid bg-light p-1" src="img/course-3.jpg" alt="">
+                            <img class="img-fluid bg-light p-1" src="./asset/img/gallery/gallery-3.png" alt="gallery-3">
                         </div>
                         <div class="col-4">
-                            <img class="img-fluid bg-light p-1" src="img/course-2.jpg" alt="">
+                            <img class="img-fluid bg-light p-1" src="./asset/img/gallery/gallery-4.jpg" alt="gallery-4">
                         </div>
                         <div class="col-4">
-                            <img class="img-fluid bg-light p-1" src="img/course-3.jpg" alt="">
-                        </div>
-                        <div class="col-4">
-                            <img class="img-fluid bg-light p-1" src="img/course-1.jpg" alt="">
+                            <img class="img-fluid bg-light p-1" src="./asset/img/gallery/gallery-5.jpg" alt="gallery-5">
                         </div>
                     </div>
                 </div>
