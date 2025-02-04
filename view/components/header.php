@@ -3,14 +3,11 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Innovator's Gallery</title>
-    <link href="./asset/logo/igLogo.png" rel="icon">
+    <title>Isotral</title>
+    <link href="../asset/logo/Isotral-favicon.png" rel="icon">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
-
-    <!-- Favicon -->
-    <link href="../asset/logo/igLogo.png" rel="icon">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -45,11 +42,7 @@
     <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
         <a href="../" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
             <div class="d-flex flex-row align-items-center">
-                <img class="site-logo" src="../asset/logo/igLogo.png" alt="innovators gallery" height="50" width="50">
-                <div>
-                    <h4 class="px-2 m-0 text-primary site-name">Innovator's Gallery</h4>
-                    <h6 class="px-2 m-0 text-secondary site-subtitle">Explore the creativity</h6>
-                </div>
+                <img src="../asset/logo/Isotral-logo.png" alt="Isotral" width="100">
             </div>
         </a>
         <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
@@ -60,7 +53,7 @@
                 <a href="../" id="home" class="nav-item nav-link">Home</a>
                 <a href="about" id="about" class="nav-item nav-link">About</a>
                 <a href="gallery" id="gallery" class="nav-item nav-link">Gallery</a>
-                <a href="testimonial" id="testimonial" class="nav-item nav-link">Testimonial</a>
+                <!-- <a href="testimonial" id="testimonial" class="nav-item nav-link">Testimonial</a> -->
                 <a href="contact" id="contact" class="nav-item nav-link">Contact</a>
                 <!-- <div class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>

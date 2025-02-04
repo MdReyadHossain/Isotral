@@ -38,7 +38,7 @@
                     </div>
                     <div class="ms-3">
                         <h5 class="text-primary">Office</h5>
-                        <p class="mb-0">Location, City, Country</p>
+                        <p class="mb-0">Bogura, Bangladesh</p>
                     </div>
                 </div>
                 <div class="d-flex align-items-center mb-3">
@@ -47,7 +47,8 @@
                     </div>
                     <div class="ms-3">
                         <h5 class="text-primary">Mobile</h5>
-                        <p class="mb-0">+012 345 67890</p>
+                        <p class="mb-2"> +88 01771449957 </p>
+                        <p class="mb-2"> +88 01956394373 </p>
                     </div>
                 </div>
                 <div class="d-flex align-items-center">
@@ -56,7 +57,7 @@
                     </div>
                     <div class="ms-3">
                         <h5 class="text-primary">Email</h5>
-                        <p class="mb-0">igallerybd@outlook.com</p>
+                        <p class="mb-0">info.isotral@gmail.com</p>
                     </div>
                 </div>
             </div>

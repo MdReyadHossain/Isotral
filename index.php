@@ -3,8 +3,8 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Innovator's Gallery</title>
-    <link href="./asset/logo/igLogo.png" rel="icon">
+    <title>Isotral</title>
+    <link href="./asset/logo/Isotral-favicon.png" rel="icon">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -45,11 +45,7 @@
     <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
         <a href="" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
             <div class="d-flex flex-row align-items-center">
-                <img src="./asset/logo/igLogo.png" alt="innovators gallery" height="50" width="50">
-                <div>
-                    <h4 class="navbar-main-text px-2 m-0 text-primary">Innovator's Gallery</h4>
-                    <h6 class="navbar-sub-text px-2 m-0 text-secondary">Explore the creativity</h6>
-                </div>
+                <img src="./asset/logo/Isotral-logo.png" alt="Isotral" width="100">
             </div>
         </a>
         <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
@@ -60,8 +56,8 @@
                 <a href="" id="home" class="nav-item nav-link active">Home</a>
                 <a href="./view/about" id="about" class="nav-item nav-link">About</a>
                 <a href="./view/gallery" id="gallery" class="nav-item nav-link">Gallery</a>
-                <a href="./view/testimonial" id="testimonial" class="nav-item nav-link">Testimonial</a>
-                <a href="contact" id="contact" class="nav-item nav-link">Contact</a>
+                <!-- <a href="./view/testimonial" id="testimonial" class="nav-item nav-link">Testimonial</a> -->
+                <a href="./view/contact" id="contact" class="nav-item nav-link">Contact</a>
                 <!-- <div class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
                     <div class="dropdown-menu fade-down m-0">
@@ -83,11 +79,10 @@
                     <div class="container">
                         <div class="row justify-content-start">
                             <div class="col-sm-10 col-lg-8">
-                                <h5 class="text-primary text-uppercase mb-3 animated slideInDown">Innovator's Gallery</h5>
                                 <h1 class="display-3 text-white animated slideInDown">Explore the Creativity</h1>
-                                <p class="fs-5 text-white mb-4 pb-2">We are here for ensuring the motives to- Learn Something New Share knowledge among the curious world Decorate your own dimension</p>
+                                <p class="fs-5 text-white mb-4 pb-2">We are here for ensuring the motives to learn something new share knowledge among the curious world decorate your own dimension</p>
                                 <a href="#service" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Read More</a>
-                                <a href="" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Join Now</a>
+                                <a href="./view/login" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Join Now</a>
                             </div>
                         </div>
                     </div>
@@ -99,7 +94,6 @@
                     <div class="container">
                         <div class="row justify-content-start">
                             <div class="col-sm-10 col-lg-8">
-                                <h5 class="text-primary text-uppercase mb-3 animated slideInDown">Innovator's Gallery</h5>
                                 <h1 class="display-3 text-white animated slideInDown">Dive into creativity and let your imagination soar</h1>
                                 <p class="fs-5 text-white mb-4 pb-2">Life is beautiful and it becomes more beautiful when you will create something new which opens the door of more and more new possibilities.
                                 </p>
@@ -163,12 +157,12 @@
             <div class="row g-5">
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 400px;">
                     <div class="position-relative h-100">
-                        <img class="img-fluid position-absolute w-100 h-100" src="./asset/logo/igLogo.png" alt="" style="object-fit: contain;">
+                        <img class="img-fluid position-absolute w-100 h-100" src="./asset/logo/Isotral-logo2.png" alt="" style="object-fit: contain;">
                     </div>
                 </div>
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
                     <h6 class="section-title bg-white text-start text-primary pe-3">About Us</h6>
-                    <h1 class="mb-4">Welcome to Innovator's Gallery</h1>
+                    <h1 class="mb-4">Welcome to Isotral</h1>
                     <p class="mb-4">Human being is the best creature in creation.Because our life is not confined to only in doing of biological activities like other animals. Rather to think freely and to make it tangible.Our current world is going ahead and life is becoming more easy than before which is the fruit of thousands creative and analytical minds. Our motive is to bestir the curiosity, creativity and analytical thoughts among the enthusiastic minds.</p>
                     <div class="row gy-2 gx-4 mb-4">
                         <div class="col-sm-6">
@@ -208,7 +202,7 @@
                                 <img class="img-fluid" src="./asset/img/gallery/gallery-2.jpg" alt="">
                                 <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3" style="margin: 1px;">
                                     <h5 class="m-0">Public Safety</h5>
-                                    <small class="text-primary">09 blogs</small>
+                                    <!-- <small class="text-primary">09 blogs</small> -->
                                 </div>
                             </a>
                         </div>
@@ -217,16 +211,16 @@
                                 <img class="img-fluid" src="./asset/img/gallery/gallery-1.jpg" alt="">
                                 <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3" style="margin: 1px;">
                                     <h5 class="m-0">Human Rights</h5>
-                                    <small class="text-primary">11 blogs</small>
+                                    <!-- <small class="text-primary">11 blogs</small> -->
                                 </div>
                             </a>
                         </div>
                         <div class="col-lg-6 col-md-12 wow zoomIn" data-wow-delay="0.5s">
                             <a class="position-relative d-block overflow-hidden" href="">
-                                <img class="img-fluid" src="./asset/img/gallery/gellary-3.png" alt="">
+                                <img class="img-fluid" src="./asset/img/gallery/gallery-3.png" alt="">
                                 <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3" style="margin: 1px;">
                                     <h5 class="m-0">Climate Control</h5>
-                                    <small class="text-primary">04 blogs</small>
+                                    <!-- <small class="text-primary">04 blogs</small> -->
                                 </div>
                             </a>
                         </div>
@@ -237,7 +231,7 @@
                         <img class="img-fluid position-absolute w-100 h-100" src="./asset/img/gallery/gallery-4.jpg" alt="" style="object-fit: cover;">
                         <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3" style="margin:  1px;">
                             <h5 class="m-0">Education</h5>
-                            <small class="text-primary">35 blogs</small>
+                            <!-- <small class="text-primary">35 blogs</small> -->
                         </div>
                     </a>
                 </div>
@@ -367,24 +361,6 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="team-item bg-light">
-                        <div class="overflow-hidden">
-                            <img class="img-fluid" src="./asset/img/members/profile-1.jpg" alt="">
-                        </div>
-                        <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
-                            <div class="bg-light d-flex justify-content-center pt-2 px-1">
-                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-linkedin"></i></a>
-                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fas fa-globe"></i></a>
-                            </div>
-                        </div>
-                        <div class="text-center p-4">
-                            <h5 class="mb-0">Shezan Ahmmed</h5>
-                            <small>Mechatronics Engineer</small>
-                        </div>
-                    </div>
-                </div>
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
                     <div class="team-item bg-light">
                         <div class="overflow-hidden">
@@ -411,33 +387,18 @@
     <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
         <div class="container">
             <div class="text-center">
-                <h6 class="section-title bg-white text-center text-primary px-3">Testimonial</h6>
-                <h1 class="mb-5">Reviews</h1>
+                <h6 class="section-title bg-white text-center text-primary px-3">Brand</h6>
+                <h1 class="mb-5">Our Innovation</h1>
             </div>
             <div class="owl-carousel testimonial-carousel position-relative">
                 <div class="testimonial-item text-center">
-                    <img class="border rounded-circle p-2 mx-auto mb-3" src="./asset/img/members/profile-1.jpg" style="width: 80px; height: 80px;">
-                    <h5 class="mb-0">Shezan Ahmmed</h5>
-                    <p>Mechatronics Engineer</p>
-                    <div class="testimonial-text bg-light text-center p-4">
-                        <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam et eos. Clita erat ipsum et lorem et sit.</p>
-                    </div>
+                    <img class="p-2 mx-auto mb-3" src="./asset/logo/blueDot-logo2.png" style="width: 250px" />
                 </div>
                 <div class="testimonial-item text-center">
-                    <img class="border rounded-circle p-2 mx-auto mb-3" src="./asset/img/members/profile-3.jpg" style="width: 80px; height: 80px;">
-                    <h5 class="mb-0">Reyad Hossain</h5>
-                    <p>Software Engineer</p>
-                    <div class="testimonial-text bg-light text-center p-4">
-                        <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam et eos. Clita erat ipsum et lorem et sit.</p>
-                    </div>
+                    <img class="p-2 mx-auto mb-3" src="./asset/logo/Isotral_truth_network-logo.png" style="width: 250px" />
                 </div>
                 <div class="testimonial-item text-center">
-                    <img class="border rounded-circle p-2 mx-auto mb-3" src="./asset/img/members/profile-2.jpg" style="width: 80px; height: 80px;">
-                    <h5 class="mb-0">Najmus Sakib</h5>
-                    <p>Testile Engineer</p>
-                    <div class="testimonial-text bg-light text-center p-4">
-                        <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam et eos. Clita erat ipsum et lorem et sit.</p>
-                    </div>
+                    <img class="p-2 mx-auto mb-3" src="./asset/logo/Isotral-logo2.png" style="width: 250px" />
                 </div>
             </div>
         </div>
@@ -456,8 +417,13 @@
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-white mb-3">Contact</h4>
                     <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Bogura, Bangladesh</p>
-                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
-                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>igallerybd@outlook.com</p>
+                    <p class="mb-2">
+                        <i class="fa fa-phone-alt me-3"></i> +88 01771449957
+                    </p>
+                    <p class="mb-2">
+                        <i class="fa fa-phone-alt me-3"></i> +88 01956394373
+                    </p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>info.isotral@gmail.com</p>
                     <div class="d-flex pt-2">
                         <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
                         <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
@@ -499,7 +465,7 @@
             <div class="copyright">
                 <div class="row">
                     <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                        &copy; <a class="border-bottom" href="">Innovators Gallery</a>, All Right Reserved.
+                        &copy; <a class="border-bottom" href="">Isotral</a>, All Right Reserved.
 
 
                         Designed By <a class="border-bottom" target="_blank" href="https://its-reyad.netlify.app/">BeetCoder</a>

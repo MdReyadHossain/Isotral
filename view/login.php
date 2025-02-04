@@ -3,8 +3,8 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Innovator's Gallery</title>
-    <link href="./asset/logo/igLogo.png" rel="icon">
+    <title>Isotral</title>
+    <link href="../asset/logo/Isotral-favicon.png" rel="icon">
     <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans'>
     <link rel="stylesheet" href="../css/loginStyle.css">
 </head>
@@ -13,11 +13,7 @@
     <!-- partial:index.partial.html -->
     <div class="navbar">
         <a href="../" class="logo">
-            <img src="../asset/logo/igLogo.png" alt="innovators gallery" height="50" width="50">
-            <div class="navbar-text">
-                <h4 class="navbar-main-text">Innovator's Gallery</h4>
-                <h6 class="navbar-sub-text">Explore the creativity</h6>
-            </div>
+            <img src="../asset/logo/Isotral-logo.png" alt="isotral" width="80">
         </a>
     </div>
     <div class="cont">
@@ -39,7 +35,6 @@
                 <span>Phone Number</span>
                 <input type="number" />
             </label>
-            <p class="forgot-pass">Forgot password?</p>
             <button type="button" class="submit">Join</button>
         </div>
         <div class="sub-cont">
@@ -54,7 +49,7 @@
                 </div>
                 <div class="img__btn">
                     <span class="m--up">Login</span>
-                    <span class="m--in">Sign In</span>
+                    <span class="m--in">Join</span>
                 </div>
             </div>
             <div class="form sign-up">
@@ -67,6 +62,7 @@
                     <span>Password</span>
                     <input type="password" />
                 </label>
+                <p class="forgot-pass">Forgot password?</p>
                 <button type="button" class="submit">Login</button>
             </div>
         </div>

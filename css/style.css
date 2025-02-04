@@ -1,7 +1,7 @@
 /********** Template CSS **********/
 :root {
     /* --primary: #06BBCC; */
-    --primary: #00b300;
+    --primary: #181818;
     --light: #F0FBFC;
     --dark: #181d38;
 }
@@ -188,7 +188,6 @@
     top: 50%;
     right: 8%;
     transform: translateY(-50%);
-    display: flex;
     flex-direction: column;
 }
 
@@ -211,6 +210,18 @@
 .header-carousel .owl-nav .owl-next:hover {
     background: var(--primary);
     border-color: var(--primary);
+}
+
+@media (max-width: 768px) {
+    .owl-nav {
+        display: none;
+    }
+}
+
+@media (min-width: 768px) {
+    .owl-nav {
+        display: flex;
+    }
 }
 
 .page-header {

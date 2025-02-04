@@ -11,8 +11,13 @@
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-white mb-3">Contact</h4>
                     <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Bogura, Bangladesh</p>
-                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
-                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>igallerybd@outlook.com</p>
+                    <p class="mb-2">
+                        <i class="fa fa-phone-alt me-3"></i> +88 01771449957
+                    </p>
+                    <p class="mb-2">
+                        <i class="fa fa-phone-alt me-3"></i> +88 01956394373
+                    </p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>info.isotral@gmail.com</p>
                     <div class="d-flex pt-2">
                         <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
                         <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
@@ -54,7 +59,7 @@
             <div class="copyright">
                 <div class="row">
                     <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                        &copy; <a class="border-bottom" href="">Innovators Gallery</a>, All Right Reserved.
+                        &copy; <a class="border-bottom" href="">Isotral</a>, All Right Reserved.
 
 
                         Designed By <a class="border-bottom" target="_blank" href="https://its-reyad.netlify.app/">BeetCoder</a>
