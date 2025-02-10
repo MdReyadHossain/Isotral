@@ -1,4 +1,4 @@
-<?php include('./view/components/header.php') ?>
+<?php include('./views/components/header.php') ?>
 
 
 <!-- 404 Start -->
@@ -17,4 +17,4 @@
 </div>
 <!-- 404 End -->
 
-<?php include('./view/components/footer.php') ?>
+<?php include('./views/components/footer.php') ?>

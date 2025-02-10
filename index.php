@@ -1,3 +1,8 @@
+<?php
+require "./Models/dbConnect.php";
+$db = connect();
+$isotral = $db->query("SELECT * FROM admin WHERE name = 'isotral'")->fetch_assoc();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -54,10 +59,10 @@
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto p-4 p-lg-0">
                 <a href="" id="home" class="nav-item nav-link active">Home</a>
-                <a href="./view/about" id="about" class="nav-item nav-link">About</a>
-                <a href="./view/gallery" id="gallery" class="nav-item nav-link">Gallery</a>
-                <!-- <a href="./view/testimonial" id="testimonial" class="nav-item nav-link">Testimonial</a> -->
-                <a href="./view/contact" id="contact" class="nav-item nav-link">Contact</a>
+                <a href="./views/about" id="about" class="nav-item nav-link">About</a>
+                <a href="./views/gallery" id="gallery" class="nav-item nav-link">Gallery</a>
+                <!-- <a href="./views/testimonial" id="testimonial" class="nav-item nav-link">Testimonial</a> -->
+                <a href="./views/contact" id="contact" class="nav-item nav-link">Contact</a>
                 <!-- <div class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
                     <div class="dropdown-menu fade-down m-0">
@@ -65,7 +70,7 @@
                     </div>
                 </div> -->
             </div>
-            <a href="./view/login" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Join Now<i class="fa fa-arrow-right ms-3"></i></a>
+            <a href="./views/login" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Join Now<i class="fa fa-arrow-right ms-3"></i></a>
         </div>
     </nav>
     <!-- Navbar End -->
@@ -82,7 +87,7 @@
                                 <h1 class="display-3 text-white animated slideInDown">Explore the Creativity</h1>
                                 <p class="fs-5 text-white mb-4 pb-2">We are here for ensuring the motives to learn something new share knowledge among the curious world decorate your own dimension</p>
                                 <a href="#service" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Read More</a>
-                                <a href="./view/login" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Join Now</a>
+                                <a href="./views/login" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Join Now</a>
                             </div>
                         </div>
                     </div>
@@ -98,7 +103,7 @@
                                 <p class="fs-5 text-white mb-4 pb-2">Life is beautiful and it becomes more beautiful when you will create something new which opens the door of more and more new possibilities.
                                 </p>
                                 <a href="#service" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Read More</a>
-                                <a href="./view/login" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Join Now</a>
+                                <a href="./views/login" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Join Now</a>
                             </div>
                         </div>
                     </div>
@@ -181,7 +186,7 @@
                             <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Education</p>
                         </div>
                     </div>
-                    <a class="btn btn-primary py-3 px-5 mt-2" href="./view/about">Read More</a>
+                    <a class="btn btn-primary py-3 px-5 mt-2" href="./views/about">Read More</a>
                 </div>
             </div>
         </div>
@@ -391,15 +396,21 @@
                 <h1 class="mb-5">Our Innovation</h1>
             </div>
             <div class="owl-carousel testimonial-carousel position-relative">
-                <div class="testimonial-item text-center">
-                    <img class="p-2 mx-auto mb-3" src="./asset/logo/blueDot-logo2.png" style="width: 250px" />
-                </div>
-                <div class="testimonial-item text-center">
-                    <img class="p-2 mx-auto mb-3" src="./asset/logo/Isotral_truth_network-logo.png" style="width: 250px" />
-                </div>
-                <div class="testimonial-item text-center">
-                    <img class="p-2 mx-auto mb-3" src="./asset/logo/Isotral-logo2.png" style="width: 250px" />
-                </div>
+                <a href="./views/about#blue-dot">
+                    <div class="testimonial-item text-center">
+                        <img class="p-2 mx-auto mb-3" src="./asset/logo/blueDot-logo2.png" style="width: 250px" />
+                    </div>
+                </a>
+                <a href="./views/about#isotral-truth-network">
+                    <div class="testimonial-item text-center">
+                        <img class="p-2 mx-auto mb-3" src="./asset/logo/Isotral_truth_network-logo.png" style="width: 250px" />
+                    </div>
+                </a>
+                <a href="./">
+                    <div class="testimonial-item text-center">
+                        <img class="p-2 mx-auto mb-3" src="./asset/logo/Isotral-logo2.png" style="width: 250px" />
+                    </div>
+                </a>
             </div>
         </div>
     </div>
@@ -410,20 +421,32 @@
             <div class="row g-5">
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-white mb-3">Quick Link</h4>
-                    <a class="btn btn-link" href="./view/about">About Us</a>
-                    <a class="btn btn-link" href="./view/contact">Contact Us</a>
-                    <a class="btn btn-link" href="./view/gallery">Our Gallery</a>
+                    <a class="btn btn-link" href="./views/about">About Us</a>
+                    <a class="btn btn-link" href="./views/contact">Contact Us</a>
+                    <a class="btn btn-link" href="./views/gallery">Our Gallery</a>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-white mb-3">Contact</h4>
-                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Bogura, Bangladesh</p>
                     <p class="mb-2">
-                        <i class="fa fa-phone-alt me-3"></i> +88 01771449957
+                        <a href="<?php echo $isotral['address_url'] ?>" target="_blank" class="link-to">
+                            <i class="fa fa-map-marker-alt me-3"></i><?php echo $isotral['address'] ?>
+                        </a>
                     </p>
                     <p class="mb-2">
-                        <i class="fa fa-phone-alt me-3"></i> +88 01956394373
+                        <a href="tel:<?php echo $isotral['phone_first'] ?>" class="link-to">
+                            <i class="fa fa-phone-alt me-3"></i> <?php echo $isotral['phone_first'] ?>
+                        </a>
                     </p>
-                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>info.isotral@gmail.com</p>
+                    <p class="mb-2">
+                        <a href="tel:<?php echo $isotral['phone_second'] ?>" class="link-to">
+                            <i class="fa fa-phone-alt me-3"></i> <?php echo $isotral['phone_second'] ?>
+                        </a>
+                    </p>
+                    <p class="mb-2">
+                        <a href="mailto:<?php echo $isotral['email'] ?>" class="link-to">
+                            <i class="fa fa-envelope me-3"></i><?php echo $isotral['email'] ?>
+                        </a>
+                    </p>
                     <div class="d-flex pt-2">
                         <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
                         <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
