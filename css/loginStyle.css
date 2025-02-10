@@ -125,6 +125,25 @@ button {
   background: rgba(0, 0, 0, 0.6);
 }
 
+.alert-success {
+  color: green;
+  font-weight: bold;
+  padding: 10px;
+  border: 1px solid green;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.alert-danger {
+  color: red;
+  font-weight: bold;
+  padding: 10px;
+  border: 1px solid red;
+  border-radius: 5px;
+  font-size: 13px;
+  text-transform: capitalize;
+}
+
 .cont.s--signup .img:before {
   transform: translate3d(640px, 0, 0);
 }
