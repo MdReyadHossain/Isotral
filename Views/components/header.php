@@ -58,7 +58,7 @@ $isotral = $db->query("SELECT * FROM admin WHERE name = 'isotral'")->fetch_assoc
             <div class="navbar-nav ms-auto p-4 p-lg-0">
                 <a href="../" id="home" class="nav-item nav-link">Home</a>
                 <a href="about" id="about" class="nav-item nav-link">About</a>
-                <a href="gallery" id="gallery" class="nav-item nav-link">Gallery</a>
+                <a href="gallery" id="blogs" class="nav-item nav-link">Blogs</a>
                 <!-- <a href="testimonial" id="testimonial" class="nav-item nav-link">Testimonial</a> -->
                 <a href="contact" id="contact" class="nav-item nav-link">Contact</a>
                 <!-- <div class="nav-item dropdown">

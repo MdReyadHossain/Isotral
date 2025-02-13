@@ -60,7 +60,7 @@ $isotral = $db->query("SELECT * FROM admin WHERE name = 'isotral'")->fetch_assoc
             <div class="navbar-nav ms-auto p-4 p-lg-0">
                 <a href="" id="home" class="nav-item nav-link active">Home</a>
                 <a href="./views/about" id="about" class="nav-item nav-link">About</a>
-                <a href="./views/gallery" id="gallery" class="nav-item nav-link">Gallery</a>
+                <a href="./views/gallery" id="blogs" class="nav-item nav-link">Blogs</a>
                 <!-- <a href="./views/testimonial" id="testimonial" class="nav-item nav-link">Testimonial</a> -->
                 <a href="./views/contact" id="contact" class="nav-item nav-link">Contact</a>
                 <!-- <div class="nav-item dropdown">
@@ -168,7 +168,7 @@ $isotral = $db->query("SELECT * FROM admin WHERE name = 'isotral'")->fetch_assoc
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
                     <h6 class="section-title bg-white text-start text-primary pe-3">About Us</h6>
                     <h1 class="mb-4">Welcome to Isotral</h1>
-                    <p class="mb-4">Human being is the best creature in creation.Because our life is not confined to only in doing of biological activities like other animals. Rather to think freely and to make it tangible.Our current world is going ahead and life is becoming more easy than before which is the fruit of thousands creative and analytical minds. Our motive is to bestir the curiosity, creativity and analytical thoughts among the enthusiastic minds.</p>
+                    <p class="mb-4">Our world faces countless challenges every moment. While it's impossible to eliminate every problem entirely, we believe it's possible to solve those that impact our lives the most, making life better and more comfortable. Isotral, along with its branch platforms, is dedicated to addressing these issues. In the future, we aim to expand our platforms to further enhance your quality of life. Our mission is simple, to give you a better life</p>
                     <div class="row gy-2 gx-4 mb-4">
                         <div class="col-sm-6">
                             <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Safety and Security</p>
@@ -355,9 +355,12 @@ $isotral = $db->query("SELECT * FROM admin WHERE name = 'isotral'")->fetch_assoc
                         </div>
                         <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
                             <div class="bg-light d-flex justify-content-center pt-2 px-1">
-                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-linkedin"></i></a>
-                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fas fa-globe"></i></a>
+                                <a class="btn btn-sm-square btn-primary mx-1" href="https://www.facebook.com/najmus.sakib.522"><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-sm-square btn-primary mx-1" href="https://www.linkedin.com/in/najmus-sakib-66050a215/"><i class="fab fa-linkedin"></i></a>
+                                <a class="btn btn-sm-square btn-primary mx-1" href="mailTo:najmusnishad20202@gmail.com">
+                                    <i class="fas fa-envelope"></i>
+                                </a>
+                                <!-- <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fas fa-globe"></i></a> -->
                             </div>
                         </div>
                         <div class="text-center p-4">
@@ -373,9 +376,16 @@ $isotral = $db->query("SELECT * FROM admin WHERE name = 'isotral'")->fetch_assoc
                         </div>
                         <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
                             <div class="bg-light d-flex justify-content-center pt-2 px-1">
-                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-linkedin"></i></a>
-                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fas fa-globe"></i></a>
+                                <a class="btn btn-sm-square btn-primary mx-1" href="https://www.facebook.com/mdreyadhossain.rh">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a class="btn btn-sm-square btn-primary mx-1" href="https://www.linkedin.com/in/mdreyadhossain/">
+                                    <i class="fab fa-linkedin"></i>
+                                </a>
+                                <a class="btn btn-sm-square btn-primary mx-1" href="mailTo:reyadhossain@gmail.com">
+                                    <i class="fas fa-envelope"></i>
+                                </a>
+                                <!-- <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fas fa-globe"></i></a> -->
                             </div>
                         </div>
                         <div class="text-center p-4">
@@ -397,20 +407,25 @@ $isotral = $db->query("SELECT * FROM admin WHERE name = 'isotral'")->fetch_assoc
             </div>
             <div class="owl-carousel testimonial-carousel position-relative">
                 <a href="./views/about#blue-dot">
-                    <div class="testimonial-item text-center">
+                    <div title="Blue Dot" class="testimonial-item text-center">
                         <img class="p-2 mx-auto mb-3" src="./asset/logo/blueDot-logo2.png" style="width: 250px" />
                     </div>
                 </a>
                 <a href="./views/about#isotral-truth-network">
-                    <div class="testimonial-item text-center">
+                    <div title="Isotral Truth Network" class="testimonial-item text-center">
                         <img class="p-2 mx-auto mb-3" src="./asset/logo/Isotral_truth_network-logo.png" style="width: 250px" />
                     </div>
                 </a>
                 <a href="./">
-                    <div class="testimonial-item text-center">
+                    <div title="Isotral" class="testimonial-item text-center">
                         <img class="p-2 mx-auto mb-3" src="./asset/logo/Isotral-logo2.png" style="width: 250px" />
                     </div>
                 </a>
+                <!-- <a href="./views/about#innovators-gallery">
+                    <div title="Innovators Gallery" class="testimonial-item text-center">
+                        <img class="p-2 mx-auto mb-3" src="./asset/logo/igLogo.png" style="width: 250px" />
+                    </div>
+                </a> -->
             </div>
         </div>
     </div>
@@ -448,10 +463,10 @@ $isotral = $db->query("SELECT * FROM admin WHERE name = 'isotral'")->fetch_assoc
                         </a>
                     </p>
                     <div class="d-flex pt-2">
-                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
-                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
-                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="<?php echo $isotral['twitter_url'] ?>"><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="<?php echo $isotral['facebook_url'] ?>"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="<?php echo $isotral['youtube_url'] ?>"><i class="fab fa-youtube"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="<?php echo $isotral['linkedin_url'] ?>"><i class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6">

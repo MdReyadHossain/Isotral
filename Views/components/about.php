@@ -9,11 +9,7 @@
             <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
                 <h6 class="section-title bg-white text-start text-primary pe-3">About Us</h6>
                 <h1 class="mb-4">Welcome to Isotral</h1>
-                <p class="mb-4">Human being is the best creature in creation.
-                    Because our life is not confined to only in doing of biological activities like other animals.
-                    Rather to think freely and to make it tangible.
-                    Our current world is going ahead and life is becoming more easy than before which is the fruit of thousands creative and analytical minds.
-                    Our motive is to bestir the curiosity, creativity and analytical thoughts among the enthusiastic minds.</p>
+                <p class="mb-4">Our world faces countless challenges every moment. While it's impossible to eliminate every problem entirely, we believe it's possible to solve those that impact our lives the most, making life better and more comfortable. Isotral, along with its branch platforms, is dedicated to addressing these issues. In the future, we aim to expand our platforms to further enhance your quality of life. Our mission is simple: to give you a better life</p>
                 <div class="row gy-2 gx-4 mb-4">
                     <div class="col-sm-6">
                         <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Safety and Security</p>
