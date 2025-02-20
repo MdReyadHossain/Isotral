@@ -3,9 +3,9 @@ require "../../Models/dbConnect.php";
 
 session_start();
 
-if (!isset($_SESSION["admin"])) {
-    header("Location: ../views/login");
-}
+// if (!isset($_SESSION["admin"])) {
+//     header("Location: ../views/login");
+// }
 
 $db = connect();
 $isotral = $db->query("SELECT * FROM admin WHERE name = 'isotral'")->fetch_assoc();

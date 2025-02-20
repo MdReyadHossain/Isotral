@@ -70,7 +70,7 @@ $isotral = $db->query("SELECT * FROM admin WHERE name = 'isotral'")->fetch_assoc
                     </div>
                 </div> -->
             </div>
-            <!-- <a href="./views/login" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Join Now<i class="fa fa-arrow-right ms-3"></i></a> -->
+            <a href="./views/login" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Join Now<i class="fa fa-arrow-right ms-3"></i></a>
         </div>
     </nav>
     <!-- Navbar End -->
@@ -87,7 +87,7 @@ $isotral = $db->query("SELECT * FROM admin WHERE name = 'isotral'")->fetch_assoc
                                 <h1 class="display-3 text-white animated slideInDown">Explore the Creativity</h1>
                                 <p class="fs-5 text-white mb-4 pb-2">We are here for ensuring the motives to learn something new share knowledge among the curious world decorate your own dimension</p>
                                 <a href="#service" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Read More</a>
-                                <!-- <a href="./views/login" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Join Now</a> -->
+                                <a href="./views/login" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Join Now</a>
                             </div>
                         </div>
                     </div>
@@ -103,7 +103,7 @@ $isotral = $db->query("SELECT * FROM admin WHERE name = 'isotral'")->fetch_assoc
                                 <p class="fs-5 text-white mb-4 pb-2">Life is beautiful and it becomes more beautiful when you will create something new which opens the door of more and more new possibilities.
                                 </p>
                                 <a href="#service" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Read More</a>
-                                <!-- <a href="./views/login" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Join Now</a> -->
+                                <a href="./views/login" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Join Now</a>
                             </div>
                         </div>
                     </div>

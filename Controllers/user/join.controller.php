@@ -73,7 +73,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         $msg = "New member has just joined in Isotral. Let him/her welcome,<br><br>$name<br><a href='mailto:$email'>$email</a><br><a href='tel:$phone'>$phone</a>";
         smtp_mailer("New member has joined", $msg);
 
-        setcookie("reg", "<span class='alert-success'><i class='fas fa-check'></i> Thanks for join with us!</span>", time() + 1, "/");
+        setcookie("reg", "<span class='alert-success'><i class='fas fa-check'></i> Thanks for join with us! Admin will contact with you!</span>", time() + 1, "/");
         header("location: ../../views/login");
     } else {
         setcookie("reg", "<span class='alert-danger'><i class='fas fa-exclamation-circle'></i> Registration Incomplete.</span>", time() + 1, "/");

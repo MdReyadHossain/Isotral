@@ -59,15 +59,15 @@
                     <span class="m--in">Join</span>
                 </div>
             </div>
-            <form class="form sign-up">
+            <form class="form sign-up" action="../Controllers/loginController.php" method="POST">
                 <h2>Login to portal</h2>
                 <label>
                     <span>Email</span>
-                    <input type="email" />
+                    <input type="email" name="email" required />
                 </label>
                 <label>
                     <span>Password</span>
-                    <input type="password" />
+                    <input type="password" name="password" required />
                 </label>
                 <p class="forgot-pass">Forgot password?</p>
                 <button type="button" class="submit">Login</button>
