@@ -6,10 +6,10 @@ function connect()
     $db_pass = "";
     $dbname = "isotral";
 
-    // $server = "sql308.unaux.com";
-    // $db_user = "unaux_34413651";
-    // $db_pass = "61x3te4czqr";
-    // $dbname = "unaux_34413651_saafwan";
+    // $server = "sql310.infinityfree.com";
+    // $db_user = "if0_38457029";
+    // $db_pass = "60uso3kFyph";
+    // $dbname = "if0_38457029_isotral";
     $conn = new mysqli($server, $db_user, $db_pass, $dbname);
 
     if ($conn->connect_error) {
