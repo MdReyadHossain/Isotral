@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 20, 2025 at 10:09 PM
+-- Generation Time: Mar 09, 2025 at 09:39 PM
 -- Server version: 10.1.38-MariaDB
 -- PHP Version: 7.3.2
 
@@ -164,12 +164,18 @@ CREATE TABLE `otp` (
 
 CREATE TABLE `user` (
   `id` int(11) NOT NULL,
+  `priority` int(11) DEFAULT NULL,
   `name` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
+  `facebook_url` varchar(255) DEFAULT NULL,
+  `linkedin_url` varchar(255) DEFAULT NULL,
+  `image_url` varchar(255) DEFAULT NULL,
   `phone` varchar(255) DEFAULT NULL,
   `address` varchar(255) DEFAULT NULL,
+  `profession` varchar(255) DEFAULT NULL,
+  `title` varchar(255) DEFAULT NULL,
   `password` varchar(255) NOT NULL,
-  `type` enum('ADMIN','MEMBER') NOT NULL,
+  `type` enum('ADMIN','MEMBER','SUPER_ADMIN') NOT NULL,
   `status` enum('ACTIVE','INACTIVE','PENDING') DEFAULT NULL,
   `created_at` datetime NOT NULL,
   `updated_at` datetime NOT NULL
@@ -179,11 +185,15 @@ CREATE TABLE `user` (
 -- Dumping data for table `user`
 --
 
-INSERT INTO `user` (`id`, `name`, `email`, `phone`, `address`, `password`, `type`, `status`, `created_at`, `updated_at`) VALUES
-(1, 'Reyad Hossain', 'reyadhosen@gmail.com', '01956394373', 'Bogura, Bangladesh', '123456', 'ADMIN', 'ACTIVE', '2025-02-07 00:00:00', '2025-02-07 00:00:00'),
-(3, 'Md Maruf Raihan', 'maruf@gmail.com', '01762749948', NULL, '000000', 'MEMBER', 'ACTIVE', '2025-02-08 12:21:13', '2025-02-08 12:21:13'),
-(4, 'Kamrul Koche', 'koche@gmail.com', '01755555555', 'Dhaka, Bangladesh', '000000', 'MEMBER', 'PENDING', '2025-02-12 00:00:00', '2025-02-05 00:00:00'),
-(5, 'Munira Zebin', 'zebin@gmail.com', '01788888888', 'Dhaka, Bangladesh', '000000', 'MEMBER', 'INACTIVE', '2025-02-07 00:00:00', '2025-02-07 00:00:00');
+INSERT INTO `user` (`id`, `priority`, `name`, `email`, `facebook_url`, `linkedin_url`, `image_url`, `phone`, `address`, `profession`, `title`, `password`, `type`, `status`, `created_at`, `updated_at`) VALUES
+(1, 2, 'Reyad Hossain', 'reyadhosen@gmail.com', 'https://www.facebook.com/mdreyadhossain.rh', 'https://www.linkedin.com/in/mdreyadhossain/', 'https://res.cloudinary.com/dmcppzpgl/image/upload/v1741548381/profile-3_c7ofbj.jpg', '01956394373', 'Bogura, Bangladesh', 'Software Engineer', 'Co-Founder of Isotral', '000000', 'SUPER_ADMIN', 'ACTIVE', '2025-02-07 00:00:00', '2025-02-07 00:00:00'),
+(3, 4, 'Md Maruf Raihan', 'maruf@gmail.com', 'https://www.facebook.com/shakil.islam.37625843', 'https://www.linkedin.com/in/maruf-raihan27/', 'https://res.cloudinary.com/dmcppzpgl/image/upload/v1741549441/maruf_loqxpv.jpg', '01762749948', 'Bogura, Bangladesh', 'Textile Engineer', 'CEO of Blue Dot', '000000', 'ADMIN', 'ACTIVE', '2025-02-08 12:21:13', '2025-02-08 12:21:13'),
+(4, 7, 'S.M. Kamrul Hasan Koche', 'kamrulkoche@gmail.com', 'https://www.facebook.com/kamrul.hasan.610715', 'https://www.linkedin.com/in/kamrul-hasan-koche/', 'https://res.cloudinary.com/dmcppzpgl/image/upload/v1741548642/kamrul_zivg8b.jpg', '01755555555', 'Barishal, Bangladesh', 'Software Engineer', 'Director of QuadroCode', '000000', 'ADMIN', 'PENDING', '2025-02-12 00:00:00', '2025-02-05 00:00:00'),
+(5, 3, 'Munira Zebin', 'munirazebin229@gmail.com', 'https://www.facebook.com/christinajenifer.christinajenifar', 'https://www.linkedin.com/in/munirazebin/', 'https://res.cloudinary.com/dmcppzpgl/image/upload/v1741549363/IMG_0068-02-01_a9zqed.jpg', '01788888888', 'Dhaka, Bangladesh', 'Software Engineer', 'CEO of QuadroCode', '000000', 'ADMIN', 'INACTIVE', '2025-02-07 00:00:00', '2025-02-07 00:00:00'),
+(6, 1, 'Najmus Sakib', 'najmusnishad2020@gmail.com', 'https://www.facebook.com/najmus.sakib.522', 'https://www.linkedin.com/in/najmus-sakib-66050a215/', 'https://res.cloudinary.com/dmcppzpgl/image/upload/v1741548420/profile-1_gjr6rd.png', '01771449957', 'Bogura, Bangladesh', 'Textile Engineer', 'Founder of Isotral', '000000', 'SUPER_ADMIN', 'ACTIVE', '2025-03-10 00:00:00', '2025-03-10 00:00:00'),
+(7, 5, 'Md Shahriar Islam', 'shahriarjobs111@gmail.com', 'https://www.facebook.com/profile.php?id=100031429620360', 'https://www.linkedin.com/in/md-shahriar-islam-22b415182/', 'https://res.cloudinary.com/dmcppzpgl/image/upload/v1741548444/69a35321-bcb4-44e3-9881-df98df480be0_rdxf9o.jpg', '01777610833', 'Bogura, Bangladesh', 'Aerospace Engineer', 'HR head of Isotral', '000000', 'ADMIN', 'ACTIVE', '2025-03-10 00:00:00', '2025-03-10 00:00:00'),
+(8, 6, 'Nasim Reza Hridoy', 'reza0445nrh@gmail.com', 'https://www.facebook.com/profile.php?id=100008106511380', 'https://www.linkedin.com/in/nasim-reza-hridoy-ab88b3246/', 'https://res.cloudinary.com/dmcppzpgl/image/upload/v1741548641/reza_pj0qne.jpg', '01717365484', 'Dhaka, Bangladesh', 'Software Engineer', 'Senior Director of QuadroCode', '000000', 'ADMIN', 'ACTIVE', '2025-03-10 00:00:00', '2025-03-10 00:00:00'),
+(9, NULL, 'Leon', 'leon@gmail.com', NULL, NULL, NULL, NULL, NULL, NULL, NULL, '00000', 'MEMBER', 'ACTIVE', '2025-03-10 00:00:00', '2025-03-10 00:00:00');
 
 --
 -- Indexes for dumped tables
@@ -290,7 +300,7 @@ ALTER TABLE `otp`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- Constraints for dumped tables

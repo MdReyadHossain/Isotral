@@ -25,6 +25,12 @@
             <h6 class="section-title bg-white text-center text-primary px-3">Blogs and Gallery</h6>
             <h1 class="mb-5">Blogs</h1>
         </div>
+
+        <?php include('./components/bloggers.php') ?>
+
+        <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+            <h1 class="mb-5">Gallery</h1>
+        </div>
         <div class="row g-4">
             <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                 <div class="course-item bg-light">

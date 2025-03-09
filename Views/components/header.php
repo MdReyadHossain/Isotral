@@ -2,6 +2,8 @@
 require "../Models/dbConnect.php";
 $db = connect();
 $isotral = $db->query("SELECT * FROM admin WHERE name = 'isotral'")->fetch_assoc();
+$admins = $db->query("SELECT * FROM user WHERE type = 'ADMIN' ORDER BY priority");
+$superAdmins = $db->query("SELECT * FROM user WHERE type = 'SUPER_ADMIN' ORDER BY priority");
 ?>
 
 <!DOCTYPE html>
@@ -12,8 +14,8 @@ $isotral = $db->query("SELECT * FROM admin WHERE name = 'isotral'")->fetch_assoc
     <title>Isotral</title>
     <link href="../asset/logo/Isotral-favicon.png" rel="icon">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="" name="keywords">
-    <meta content="" name="description">
+    <meta content="isotral, blue dot, isotral truth network" name="keywords">
+    <meta content="Our world faces countless challenges every moment. While it's impossible to eliminate every problem entirely, we believe it's possible to solve those that impact our lives the most, making life better and more comfortable. Isotral, along with its branch platforms, is dedicated to addressing these issues. In the future, we aim to expand our platforms to further enhance your quality of life. Our mission is simple: to give you a better life" name="description">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -68,7 +70,7 @@ $isotral = $db->query("SELECT * FROM admin WHERE name = 'isotral'")->fetch_assoc
                     </div>
                 </div> -->
             </div>
-            <a href="./login" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Join Now<i class="fa fa-arrow-right ms-3"></i></a>
+            <!-- <a href="./login" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Join Now<i class="fa fa-arrow-right ms-3"></i></a> -->
         </div>
     </nav>
 

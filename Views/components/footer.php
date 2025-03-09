@@ -71,14 +71,11 @@
             <div class="copyright">
                 <div class="row">
                     <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                        &copy; <a class="border-bottom" href="">Isotral</a>, All Right Reserved.
-
-
-                        Designed By <a class="border-bottom" target="_blank" href="https://its-reyad.netlify.app/">BeetCoder</a>
+                        &copy; <a class="border-bottom" href="">Isotral</a>, All Right Reserved. Designed By <a class="border-bottom" target="_blank" href="https://its-reyad.netlify.app/">BeetCoder</a>
                     </div>
                     <div class="col-md-6 text-center text-md-end">
                         <div class="footer-menu">
-                            <a href="">&copy; Copyright 2024</a>
+                            <a href="">&copy; Copyright <?php echo date("Y"); ?></a>
                         </div>
                     </div>
                 </div>

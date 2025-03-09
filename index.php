@@ -2,6 +2,7 @@
 require "./Models/dbConnect.php";
 $db = connect();
 $isotral = $db->query("SELECT * FROM admin WHERE name = 'isotral'")->fetch_assoc();
+$superAdmins = $db->query("SELECT * FROM user WHERE type = 'SUPER_ADMIN' ORDER BY priority");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -11,8 +12,8 @@ $isotral = $db->query("SELECT * FROM admin WHERE name = 'isotral'")->fetch_assoc
     <title>Isotral</title>
     <link href="./asset/logo/Isotral-favicon.png" rel="icon">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="" name="keywords">
-    <meta content="" name="description">
+    <meta content="isotral, blue dot, isotral truth network" name="keywords">
+    <meta content="Our world faces countless challenges every moment. While it's impossible to eliminate every problem entirely, we believe it's possible to solve those that impact our lives the most, making life better and more comfortable. Isotral, along with its branch platforms, is dedicated to addressing these issues. In the future, we aim to expand our platforms to further enhance your quality of life. Our mission is simple: to give you a better life" name="description">
 
     <!-- Favicon -->
     <link href="img/favicon.ico" rel="icon">
@@ -59,10 +60,10 @@ $isotral = $db->query("SELECT * FROM admin WHERE name = 'isotral'")->fetch_assoc
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto p-4 p-lg-0">
                 <a href="" id="home" class="nav-item nav-link active">Home</a>
-                <a href="./views/about" id="about" class="nav-item nav-link">About</a>
-                <a href="./views/gallery" id="blogs" class="nav-item nav-link">Blogs</a>
-                <!-- <a href="./views/testimonial" id="testimonial" class="nav-item nav-link">Testimonial</a> -->
-                <a href="./views/contact" id="contact" class="nav-item nav-link">Contact</a>
+                <a href="./Views/about" id="about" class="nav-item nav-link">About</a>
+                <a href="./Views/gallery" id="blogs" class="nav-item nav-link">Blogs</a>
+                <!-- <a href="./Views/testimonial" id="testimonial" class="nav-item nav-link">Testimonial</a> -->
+                <a href="./Views/contact" id="contact" class="nav-item nav-link">Contact</a>
                 <!-- <div class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
                     <div class="dropdown-menu fade-down m-0">
@@ -70,7 +71,7 @@ $isotral = $db->query("SELECT * FROM admin WHERE name = 'isotral'")->fetch_assoc
                     </div>
                 </div> -->
             </div>
-            <a href="./views/login" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Join Now<i class="fa fa-arrow-right ms-3"></i></a>
+            <!-- <a href="./Views/login" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Join Now<i class="fa fa-arrow-right ms-3"></i></a> -->
         </div>
     </nav>
     <!-- Navbar End -->
@@ -87,7 +88,7 @@ $isotral = $db->query("SELECT * FROM admin WHERE name = 'isotral'")->fetch_assoc
                                 <h1 class="display-3 text-white animated slideInDown">Explore the Creativity</h1>
                                 <p class="fs-5 text-white mb-4 pb-2">We are here for ensuring the motives to learn something new share knowledge among the curious world decorate your own dimension</p>
                                 <a href="#service" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Read More</a>
-                                <a href="./views/login" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Join Now</a>
+                                <!-- <a href="./Views/login" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Join Now</a> -->
                             </div>
                         </div>
                     </div>
@@ -103,7 +104,7 @@ $isotral = $db->query("SELECT * FROM admin WHERE name = 'isotral'")->fetch_assoc
                                 <p class="fs-5 text-white mb-4 pb-2">Life is beautiful and it becomes more beautiful when you will create something new which opens the door of more and more new possibilities.
                                 </p>
                                 <a href="#service" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Read More</a>
-                                <a href="./views/login" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Join Now</a>
+                                <!-- <a href="./Views/login" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Join Now</a> -->
                             </div>
                         </div>
                     </div>
@@ -186,7 +187,7 @@ $isotral = $db->query("SELECT * FROM admin WHERE name = 'isotral'")->fetch_assoc
                             <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Education</p>
                         </div>
                     </div>
-                    <a class="btn btn-primary py-3 px-5 mt-2" href="./views/about">Read More</a>
+                    <a class="btn btn-primary py-3 px-5 mt-2" href="./Views/about">Read More</a>
                 </div>
             </div>
         </div>
@@ -348,28 +349,29 @@ $isotral = $db->query("SELECT * FROM admin WHERE name = 'isotral'")->fetch_assoc
                 <h1 class="mb-5">Our Innovators</h1>
             </div>
             <div class="row justify-content-center">
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="team-item bg-light">
-                        <div class="overflow-hidden">
-                            <img class="img-fluid" src="./asset/img/members/profile-2.jpg" alt="">
-                        </div>
-                        <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
-                            <div class="bg-light d-flex justify-content-center pt-2 px-1">
-                                <a class="btn btn-sm-square btn-primary mx-1" href="https://www.facebook.com/najmus.sakib.522"><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-sm-square btn-primary mx-1" href="https://www.linkedin.com/in/najmus-sakib-66050a215/"><i class="fab fa-linkedin"></i></a>
-                                <a class="btn btn-sm-square btn-primary mx-1" href="mailTo:najmusnishad20202@gmail.com">
-                                    <i class="fas fa-envelope"></i>
-                                </a>
-                                <!-- <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fas fa-globe"></i></a> -->
+                <?php foreach ($superAdmins as $superAdmin): ?>
+                    <div class="col-lg-3 col-md-6 mb-2 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="team-item bg-light">
+                            <div class="overflow-hidden">
+                                <img class="img-fluid" src="<?php echo $superAdmin['image_url']; ?>" alt="Profile Image">
+                            </div>
+                            <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
+                                <div class="bg-light d-flex justify-content-center pt-2 px-1">
+                                    <!-- <a class="btn btn-sm-square btn-primary mx-1" href="<?php echo $superAdmin['facebook_url']; ?>"><i class="fab fa-facebook-f"></i></a> -->
+                                    <a class="btn btn-sm-square btn-primary mx-1" href="<?php echo $superAdmin['linkedin_url']; ?>"><i class="fab fa-linkedin"></i></a>
+                                    <a class="btn btn-sm-square btn-primary mx-1" href="mailto:<?php echo $superAdmin['email']; ?>">
+                                        <i class="fas fa-envelope"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="text-center p-4">
+                                <h5 class="mb-0"><?php echo $superAdmin['name']; ?></h5>
+                                <small><?php echo $superAdmin['title']; ?></small>
                             </div>
                         </div>
-                        <div class="text-center p-4">
-                            <h5 class="mb-0">Najmus Sakib</h5>
-                            <small>Textile Engineer</small>
-                        </div>
                     </div>
-                </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                <?php endforeach; ?>
+                <!-- <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
                     <div class="team-item bg-light">
                         <div class="overflow-hidden">
                             <img class="img-fluid" src="./asset/img/members/profile-3.jpg" alt="">
@@ -385,15 +387,16 @@ $isotral = $db->query("SELECT * FROM admin WHERE name = 'isotral'")->fetch_assoc
                                 <a class="btn btn-sm-square btn-primary mx-1" href="mailTo:reyadhossain@gmail.com">
                                     <i class="fas fa-envelope"></i>
                                 </a>
-                                <!-- <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fas fa-globe"></i></a> -->
+                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fas fa-globe"></i></a>
                             </div>
                         </div>
                         <div class="text-center p-4">
                             <h5 class="mb-0">Reyad Hossain</h5>
+                            <small>Co-Founder of Isotral</small><br>
                             <small>Software Engineer</small>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>
@@ -406,12 +409,12 @@ $isotral = $db->query("SELECT * FROM admin WHERE name = 'isotral'")->fetch_assoc
                 <h1 class="mb-5">Our Innovation</h1>
             </div>
             <div class="owl-carousel testimonial-carousel position-relative">
-                <a href="./views/about#blue-dot">
+                <a href="./Views/about#blue-dot">
                     <div title="Blue Dot" class="testimonial-item text-center">
                         <img class="p-2 mx-auto mb-3" src="./asset/logo/blueDot-logo2.png" style="width: 250px" />
                     </div>
                 </a>
-                <a href="./views/about#isotral-truth-network">
+                <a href="./Views/about#isotral-truth-network">
                     <div title="Isotral Truth Network" class="testimonial-item text-center">
                         <img class="p-2 mx-auto mb-3" src="./asset/logo/Isotral_truth_network-logo.png" style="width: 250px" />
                     </div>
@@ -421,7 +424,7 @@ $isotral = $db->query("SELECT * FROM admin WHERE name = 'isotral'")->fetch_assoc
                         <img class="p-2 mx-auto mb-3" src="./asset/logo/Isotral-logo2.png" style="width: 250px" />
                     </div>
                 </a>
-                <!-- <a href="./views/about#innovators-gallery">
+                <!-- <a href="./Views/about#innovators-gallery">
                     <div title="Innovators Gallery" class="testimonial-item text-center">
                         <img class="p-2 mx-auto mb-3" src="./asset/logo/igLogo.png" style="width: 250px" />
                     </div>
@@ -436,9 +439,9 @@ $isotral = $db->query("SELECT * FROM admin WHERE name = 'isotral'")->fetch_assoc
             <div class="row g-5">
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-white mb-3">Quick Link</h4>
-                    <a class="btn btn-link" href="./views/about">About Us</a>
-                    <a class="btn btn-link" href="./views/contact">Contact Us</a>
-                    <a class="btn btn-link" href="./views/gallery">Our Gallery</a>
+                    <a class="btn btn-link" href="./Views/about">About Us</a>
+                    <a class="btn btn-link" href="./Views/contact">Contact Us</a>
+                    <a class="btn btn-link" href="./Views/gallery">Our Gallery</a>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-white mb-3">Contact</h4>
@@ -503,14 +506,11 @@ $isotral = $db->query("SELECT * FROM admin WHERE name = 'isotral'")->fetch_assoc
             <div class="copyright">
                 <div class="row">
                     <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                        &copy; <a class="border-bottom" href="">Isotral</a>, All Right Reserved.
-
-
-                        Designed By <a class="border-bottom" target="_blank" href="https://its-reyad.netlify.app/">BeetCoder</a>
+                        &copy; <a class="border-bottom" href="">Isotral</a>, All Right Reserved. Designed By <a class="border-bottom" target="_blank" href="https://its-reyad.netlify.app/">BeetCoder</a>
                     </div>
                     <div class="col-md-6 text-center text-md-end">
                         <div class="footer-menu">
-                            <a href="">&copy; Copyright 2024</a>
+                            <a href="">&copy; Copyright <?php echo date("Y"); ?></a>
                         </div>
                     </div>
                 </div>
