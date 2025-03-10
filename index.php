@@ -366,7 +366,7 @@ $superAdmins = $db->query("SELECT * FROM user WHERE type = 'SUPER_ADMIN' ORDER B
                             </div>
                             <div class="text-center p-4">
                                 <h5 class="mb-0"><?php echo $superAdmin['name']; ?></h5>
-                                <small><?php echo $superAdmin['title']; ?></small>
+                                <small><?php echo $superAdmin['sa_title']; ?></small>
                             </div>
                         </div>
                     </div>
