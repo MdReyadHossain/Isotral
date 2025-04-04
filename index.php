@@ -24,7 +24,7 @@ $superAdmins = $db->query("SELECT * FROM user WHERE type = 'SUPER_ADMIN' ORDER B
     <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
 
     <!-- Icon Font Stylesheet -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
     <!-- Libraries Stylesheet -->
@@ -172,16 +172,16 @@ $superAdmins = $db->query("SELECT * FROM user WHERE type = 'SUPER_ADMIN' ORDER B
                     <p class="mb-4">Our world faces countless challenges every moment. While it's impossible to eliminate every problem entirely, we believe it's possible to solve those that impact our lives the most, making life better and more comfortable. Isotral, along with its branch platforms, is dedicated to addressing these issues. In the future, we aim to expand our platforms to further enhance your quality of life. Our mission is simple, to give you a better life</p>
                     <div class="row gy-2 gx-4 mb-4">
                         <div class="col-sm-6">
-                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Safety and Security</p>
+                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Engineering solution</p>
                         </div>
                         <div class="col-sm-6">
-                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Green World</p>
+                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Truth news</p>
                         </div>
                         <div class="col-sm-6">
-                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Skill</p>
+                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Technology</p>
                         </div>
                         <div class="col-sm-6">
-                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Public rights and protection</p>
+                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Public rights of Human</p>
                         </div>
                         <div class="col-sm-6">
                             <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Education</p>
@@ -419,6 +419,11 @@ $superAdmins = $db->query("SELECT * FROM user WHERE type = 'SUPER_ADMIN' ORDER B
                         <img class="p-2 mx-auto mb-3" src="./asset/logo/Isotral_truth_network-logo.png" style="width: 250px" />
                     </div>
                 </a>
+                <a href="./Views/about#QuadroCode">
+                    <div title="QuadroCode" class="testimonial-item text-center">
+                        <img class="p-2 mx-auto mb-3" src="./asset/logo/QuadroCode.png" style="width: 250px" />
+                    </div>
+                </a>
                 <a href="./">
                     <div title="Isotral" class="testimonial-item text-center">
                         <img class="p-2 mx-auto mb-3" src="./asset/logo/Isotral-logo2.png" style="width: 250px" />
@@ -466,7 +471,7 @@ $superAdmins = $db->query("SELECT * FROM user WHERE type = 'SUPER_ADMIN' ORDER B
                         </a>
                     </p>
                     <div class="d-flex pt-2">
-                        <a class="btn btn-outline-light btn-social" href="<?php echo $isotral['twitter_url'] ?>"><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="<?php echo $isotral['twitter_url'] ?>"><i class="fa-brands fa-x-twitter"></i></a>
                         <a class="btn btn-outline-light btn-social" href="<?php echo $isotral['facebook_url'] ?>"><i class="fab fa-facebook-f"></i></a>
                         <a class="btn btn-outline-light btn-social" href="<?php echo $isotral['youtube_url'] ?>"><i class="fab fa-youtube"></i></a>
                         <a class="btn btn-outline-light btn-social" href="<?php echo $isotral['linkedin_url'] ?>"><i class="fab fa-linkedin-in"></i></a>

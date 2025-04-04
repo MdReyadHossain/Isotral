@@ -1,9 +1,10 @@
 <?php
 require "../../Models/dbConnect.php";
 session_start();
-// if (!isset($_SESSION["patient"])) {
-//     header("Location: ../login");
-// }
+
+if (!isset($_SESSION["member"])) {
+    header("Location: ../login");
+}
 
 $db = connect();
 $isotral = $db->query("SELECT * FROM admin WHERE name = 'isotral'")->fetch_assoc();
@@ -23,4 +24,3 @@ $isotral = $db->query("SELECT * FROM admin WHERE name = 'isotral'")->fetch_assoc
 // $appointmentLog = $db->query("SELECT patients.*, appointments.* FROM appointments INNER JOIN patients ON appointments.patient_id = patients.id WHERE appointments.user = 'doctor' ORDER BY appointments.status DESC");
 
 // $treatment = $db->query("SELECT treatments.*, patients.*, treatments.id treatment_id from treatments INNER JOIN patients ON treatments.patient_id = patients.id WHERE patient_id = '" . $_SESSION['id'] . "' ORDER BY date DESC, treatments.id DESC");
-?>

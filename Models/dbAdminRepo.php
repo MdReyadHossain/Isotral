@@ -3,15 +3,15 @@ require "../../Models/dbConnect.php";
 
 session_start();
 
-// if (!isset($_SESSION["admin"])) {
-//     header("Location: ../views/login");
-// }
+if (!isset($_SESSION["admin"])) {
+    header("Location: ../login");
+}
 
 $db = connect();
 $isotral = $db->query("SELECT * FROM admin WHERE name = 'isotral'")->fetch_assoc();
 
-// $allPatients = $db->query("SELECT * FROM patients ORDER BY id DESC");
-// $patients = $db->query("SELECT * FROM patients WHERE status = true");
+$allBoardMembers = $db->query("SELECT * FROM user WHERE type != 'MEMBER' AND status = 'ACTIVE' ORDER BY id DESC");
+$allMembers = $db->query("SELECT * FROM user WHERE status = 'ACTIVE' ORDER BY id DESC");
 // $services = $db->query("SELECT * FROM services ORDER BY id DESC");
 // $medicines = $db->query("SELECT * FROM medicines ORDER BY id DESC");
 // $patientsMsg = $db->query("SELECT patients.*, messages.* FROM messages INNER JOIN patients ON messages.patient_id = patients.id WHERE messages.status = true ORDER BY messages.id DESC");

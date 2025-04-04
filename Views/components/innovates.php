@@ -1,6 +1,27 @@
 <div class="container-xxl py-5">
     <div class="container">
         <h6 class="section-title bg-white text-start text-primary pe-3"></h6>
+        <div id="isotral-truth-network" class="row g-5 mb-4">
+            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 400px;">
+                <div class="position-relative h-100">
+                    <img class="img-fluid position-absolute w-100 h-100" src="../asset/logo/QuadroCode.png" alt="isotral truth network" style="object-fit: contain;">
+                </div>
+            </div>
+            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
+                <h1 class="mb-4">QuadroCode</h1>
+                <p class="mb-4">QuadroCode, a member of Isotral family, is dedicated to developing modern technology and software. We are living in an age where speed and efficiency are crucial. QuadroCode strive to push boundaries and create next-generation tools and software that drive innovation.</p>
+                <p class="mb-4">QuadroCode defining efficiency and innovation high-performance software technology, automation tools, and cutting-edge technologies that empower businesses and individuals worldwide. QuadroCode is here to redefine the future of technology.</p>
+                <div class="row gy-2 gx-4 mb-4">
+                    <div class="col-sm-6">
+                        <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Software</p>
+                    </div>
+                    <div class="col-sm-6">
+                        <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>High Technology</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <div id="blue-dot" class="row g-5">
             <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
                 <h1 class="mb-4">Blue Dot</h1>

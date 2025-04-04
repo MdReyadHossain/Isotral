@@ -264,3 +264,26 @@
     width: 150px;
     height: 150px;
 }
+
+.profile-image {
+    cursor: pointer;
+}
+
+.img-container {
+    max-width: 100%;
+    max-height: 400px;
+}
+
+.progress {
+    display: none;
+    margin-bottom: 1rem;
+}
+
+.icon-circle {
+    width: 35px;
+    height: 35px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}

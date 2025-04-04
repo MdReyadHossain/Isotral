@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 10, 2025 at 09:28 AM
+-- Generation Time: Mar 25, 2025 at 08:44 AM
 -- Server version: 10.1.38-MariaDB
 -- PHP Version: 7.3.2
 
@@ -143,6 +143,24 @@ CREATE TABLE `login` (
   `updated_at` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `login`
+--
+
+INSERT INTO `login` (`id`, `user_id`, `ip`, `location`, `created_at`, `updated_at`) VALUES
+(1, 1, '27.147.204.204', 'Rajshahi Division, Bangladesh', '2025-03-21 12:49:48', '2025-03-21 12:49:48'),
+(2, 1, '27.147.204.204', 'Rajshahi Division, Bangladesh', '2025-03-21 14:14:01', '2025-03-21 14:14:01'),
+(3, 1, '27.147.204.204', 'Rajshahi Division, Bangladesh', '2025-03-21 14:15:55', '2025-03-21 14:15:55'),
+(4, 1, '27.147.204.204', 'Rajshahi Division, Bangladesh', '2025-03-21 14:16:14', '2025-03-21 14:16:14'),
+(5, 1, '27.147.204.204', 'Rajshahi Division, Bangladesh', '2025-03-23 18:23:28', '2025-03-23 18:23:28'),
+(6, 8, '27.147.204.204', 'Rajshahi Division, Bangladesh', '2025-03-23 18:46:38', '2025-03-23 18:46:38'),
+(7, 8, '27.147.204.204', 'Rajshahi Division, Bangladesh', '2025-03-23 18:46:53', '2025-03-23 18:46:53'),
+(8, 8, '27.147.204.204', 'Rajshahi Division, Bangladesh', '2025-03-23 21:35:25', '2025-03-23 21:35:25'),
+(9, 8, '27.147.204.204', 'Rajshahi Division, Bangladesh', '2025-03-23 21:36:35', '2025-03-23 21:36:35'),
+(10, 8, '27.147.204.204', 'Rajshahi Division, Bangladesh', '2025-03-23 21:38:32', '2025-03-23 21:38:32'),
+(11, 8, '27.147.204.204', 'Rajshahi Division, Bangladesh', '2025-03-23 21:51:16', '2025-03-23 21:51:16'),
+(12, 8, '27.147.204.204', 'Rajshahi Division, Bangladesh', '2025-03-23 22:11:07', '2025-03-23 22:11:07');
+
 -- --------------------------------------------------------
 
 --
@@ -188,9 +206,9 @@ CREATE TABLE `user` (
 
 INSERT INTO `user` (`id`, `priority`, `name`, `email`, `facebook_url`, `linkedin_url`, `image_url`, `phone`, `address`, `profession`, `title`, `sa_title`, `password`, `type`, `status`, `created_at`, `updated_at`) VALUES
 (1, 2, 'Reyad Hossain', 'reyadhosen@gmail.com', 'https://www.facebook.com/mdreyadhossain.rh', 'https://www.linkedin.com/in/mdreyadhossain/', 'https://res.cloudinary.com/dmcppzpgl/image/upload/v1741548381/profile-3_c7ofbj.jpg', '01956394373', 'Bogura, Bangladesh', 'Software Engineer', 'Vice President of Isotral', 'Co-Founder of Isotral', '000000', 'SUPER_ADMIN', 'ACTIVE', '2025-02-07 00:00:00', '2025-02-07 00:00:00'),
-(3, 4, 'Md Maruf Raihan', 'maruf@gmail.com', 'https://www.facebook.com/shakil.islam.37625843', 'https://www.linkedin.com/in/maruf-raihan27/', 'https://res.cloudinary.com/dmcppzpgl/image/upload/v1741549441/maruf_loqxpv.jpg', '01762749948', 'Bogura, Bangladesh', 'Textile Engineer', 'CEO of Blue Dot', NULL, '000000', 'ADMIN', 'ACTIVE', '2025-02-08 12:21:13', '2025-02-08 12:21:13'),
+(3, 4, 'Md Maruf Raihan', 'marufraihan99@gmail.com', 'https://www.facebook.com/shakil.islam.37625843', 'https://www.linkedin.com/in/maruf-raihan27/', 'https://res.cloudinary.com/dmcppzpgl/image/upload/v1741549441/maruf_loqxpv.jpg', '01762749948', 'Bogura, Bangladesh', 'Textile Engineer', 'CEO of Blue Dot', NULL, '000000', 'ADMIN', 'ACTIVE', '2025-02-08 12:21:13', '2025-02-08 12:21:13'),
 (4, 7, 'S.M. Kamrul Hasan Koche', 'kamrulkoche@gmail.com', 'https://www.facebook.com/kamrul.hasan.610715', 'https://www.linkedin.com/in/kamrul-hasan-koche/', 'https://res.cloudinary.com/dmcppzpgl/image/upload/v1741548642/kamrul_zivg8b.jpg', '01755555555', 'Barishal, Bangladesh', 'Software Engineer', 'Director of QuadroCode', NULL, '000000', 'ADMIN', 'ACTIVE', '2025-02-12 00:00:00', '2025-02-05 00:00:00'),
-(5, 3, 'Munira Zebin', 'munirazebin229@gmail.com', 'https://www.facebook.com/christinajenifer.christinajenifar', 'https://www.linkedin.com/in/munirazebin/', 'https://res.cloudinary.com/dmcppzpgl/image/upload/v1741549363/IMG_0068-02-01_a9zqed.jpg', '01788888888', 'Dhaka, Bangladesh', 'Software Engineer', 'CEO of QuadroCode', NULL, '000000', 'ADMIN', 'ACTIVE', '2025-02-07 00:00:00', '2025-02-07 00:00:00'),
+(5, 3, 'Munira Zebin', 'munirazebin229@gmail.com', 'https://www.facebook.com/christinajenifer.christinajenifar', 'https://www.linkedin.com/in/munirazebin/', 'https://res.cloudinary.com/dmcppzpgl/image/upload/v1741852816/isotral-zebin_liv5ot.jpg', '01788888888', 'Dhaka, Bangladesh', 'SQA Engineer', 'CEO of QuadroCode', NULL, '000000', 'ADMIN', 'ACTIVE', '2025-02-07 00:00:00', '2025-02-07 00:00:00'),
 (6, 1, 'Najmus Sakib', 'najmusnishad2020@gmail.com', 'https://www.facebook.com/najmus.sakib.522', 'https://www.linkedin.com/in/najmus-sakib-66050a215/', 'https://res.cloudinary.com/dmcppzpgl/image/upload/v1741548420/profile-1_gjr6rd.png', '01771449957', 'Bogura, Bangladesh', 'Textile Engineer', 'President of Isotral', 'Founder of Isotral', '000000', 'SUPER_ADMIN', 'ACTIVE', '2025-03-10 00:00:00', '2025-03-10 00:00:00'),
 (7, 5, 'Md Shahriar Islam', 'shahriarjobs111@gmail.com', 'https://www.facebook.com/profile.php?id=100031429620360', 'https://www.linkedin.com/in/md-shahriar-islam-22b415182/', 'https://res.cloudinary.com/dmcppzpgl/image/upload/v1741548444/69a35321-bcb4-44e3-9881-df98df480be0_rdxf9o.jpg', '01777610833', 'Bogura, Bangladesh', 'Aerospace Engineer', 'HR head of Isotral', NULL, '000000', 'ADMIN', 'ACTIVE', '2025-03-10 00:00:00', '2025-03-10 00:00:00'),
 (8, 6, 'Nasim Reza Hridoy', 'reza0445nrh@gmail.com', 'https://www.facebook.com/profile.php?id=100008106511380', 'https://www.linkedin.com/in/nasim-reza-hridoy-ab88b3246/', 'https://res.cloudinary.com/dmcppzpgl/image/upload/v1741548641/reza_pj0qne.jpg', '01717365484', 'Dhaka, Bangladesh', 'Software Engineer', 'Senior Director of QuadroCode', NULL, '000000', 'ADMIN', 'ACTIVE', '2025-03-10 00:00:00', '2025-03-10 00:00:00'),
@@ -289,7 +307,7 @@ ALTER TABLE `fund`
 -- AUTO_INCREMENT for table `login`
 --
 ALTER TABLE `login`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `otp`

@@ -1,3 +1,15 @@
+<?php
+session_start();
+if (isset($_SESSION["super_admin"]))
+    header("Location: super-admin-panel/dashboard");
+
+else if (isset($_SESSION["admin"]))
+    header("Location: admin-panel/dashboard");
+
+else if (isset($_SESSION["member"]))
+    header("Location: member-panel/dashboard");
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,6 +30,11 @@
             <img src="../asset/logo/Isotral-logo.png" alt="isotral" width="80">
         </a>
     </div>
+    <div class="container" style="width: 100vw; display: flex; justify-content: center; margin: 10px 0;">
+        <?php if (isset($_COOKIE["reg"])) {
+            echo $_COOKIE["reg"];
+        } ?>
+    </div>
     <div class="cont">
         <form class="form sign-in" action="../Controllers/user/join.controller.php" method="POST">
             <h2>Join with us</h2>
@@ -37,11 +54,6 @@
                 <span>New Password *</span>
                 <input type="password" autocomplete="off" name="password" required />
             </label>
-            <p style="text-align: center; margin: 20px;">
-                <?php if (isset($_COOKIE["reg"])) {
-                    echo $_COOKIE["reg"];
-                } ?>
-            </p>
             <button type="submit" class="submit">Join</button>
         </form>
         <div class="sub-cont">
@@ -70,7 +82,7 @@
                     <input type="password" name="password" required />
                 </label>
                 <p class="forgot-pass">Forgot password?</p>
-                <button type="button" class="submit">Login</button>
+                <button type="submit" class="submit">Login</button>
             </form>
         </div>
     </div>

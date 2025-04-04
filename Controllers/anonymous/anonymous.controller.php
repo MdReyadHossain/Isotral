@@ -31,7 +31,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         if (!preg_match($phoneReg, $phone)) {
             $isValid = false;
             setcookie("error", "<span class='alert alert-danger' role='alert'><i class='fas fa-exclamation-circle'></i> Invalid Phone Number</span>", time() + 1, "/");
-            header("location: ../../views/contact#get-in-touch");
+            header("location: ../../Views/contact#get-in-touch");
             die();
         }
     }
@@ -39,7 +39,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
         $isValid = false;
         setcookie("error", "<span class='alert alert-danger' role='alert'><i class='fas fa-exclamation-circle'></i> Invalid Email</span>", time() + 1, "/");
-        header("location: ../../views/contact#get-in-touch");
+        header("location: ../../Views/contact#get-in-touch");
         die();
     }
 
@@ -49,10 +49,10 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 
         anonymousInsert($name, $email, $phone, $message);
         setcookie("error", "<span class='alert alert-success' role='alert'><i class='fas fa-check'></i> Massege Sent. Thank you for your.</span>", time() + 1, "/");
-        header("location: ../../views/contact#get-in-touch");
+        header("location: ../../Views/contact#get-in-touch");
     } else {
         setcookie("error", "<span class='alert alert-danger' role='alert'><i class='fas fa-exclamation-circle'></i> Input Field Should not be empty!</span>", time() + 1, "/");
-        header("location: ../../views/contact#get-in-touch");
+        header("location: ../../Views/contact#get-in-touch");
     }
 }
 
