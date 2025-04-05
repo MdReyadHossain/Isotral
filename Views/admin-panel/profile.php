@@ -165,54 +165,55 @@
                             </div>
                             <?php if (!empty($_SESSION["website"])): ?>
                                 <div class="h6">
-                                    <div class="d-flex align-items-center gap-2">
-                                        <div class="text-white bg-primary icon-circle">
-                                            <i class="fas fa-globe"></i>
-                                        </div>
-                                        <?php echo $_SESSION["website"] ?>
-                                    </div>
-                                </div>
-                            <?php endif; ?>
-
-                            <div class="mt-4 text-center">
-                                <div class="mb-2"> Contact With Me </div>
-                                <div class="d-flex w-100 justify-content-center gap-2">
-                                    <?php if (!empty($_SESSION["facebook_url"])): ?>
-                                        <a href="<?php echo $_SESSION["facebook_url"] ?>" target="_blank">
-                                            <div class="icon-circle" style="background-color: #2d85f7;">
-                                                <i class="fab fa-facebook-f text-white"></i>
+                                    <a href="<?php echo $_SESSION["website"] ?>" target="_blank">
+                                        <div class="d-flex align-items-center gap-2">
+                                            <div class="text-white bg-primary icon-circle">
+                                                <i class="fas fa-globe"></i>
                                             </div>
-                                        </a>
-                                    <?php endif; ?>
-                                    <?php if (!empty($_SESSION["instagram_url"])): ?>
-                                        <a href="<?php echo $_SESSION["instagram_url"] ?>" target="_blank">
-                                            <div class="icon-circle" style="background-color: #dd2a7b;">
-                                                <i class="fab fa-instagram text-white"></i>
-                                            </div>
-                                        </a>
-                                    <?php endif; ?>
-                                    <?php if (!empty($_SESSION["twitter_url"])): ?>
-                                        <a href="<?php echo $_SESSION["twitter_url"] ?>" target="_blank">
-                                            <div class="icon-circle" style="background-color: #000000;">
-                                                <i class="fa-brands fa-x-twitter text-white"></i>
-                                            </div>
-                                        </a>
-                                    <?php endif; ?>
-                                    <a href="<?php echo $_SESSION["linkedin_url"] ?>" target="_blank">
-                                        <div class="icon-circle" style="background-color: #0077B5;">
-                                            <i class="fab fa-linkedin-in text-white"></i>
+                                            <?php echo $_SESSION["website"] ?>
                                         </div>
                                     </a>
+                                <?php endif; ?>
+
+                                <div class="mt-4 text-center">
+                                    <div class="mb-2"> Contact With Me </div>
+                                    <div class="d-flex w-100 justify-content-center gap-2">
+                                        <?php if (!empty($_SESSION["facebook_url"])): ?>
+                                            <a href="<?php echo $_SESSION["facebook_url"] ?>" target="_blank">
+                                                <div class="icon-circle" style="background-color: #2d85f7;">
+                                                    <i class="fab fa-facebook-f text-white"></i>
+                                                </div>
+                                            </a>
+                                        <?php endif; ?>
+                                        <?php if (!empty($_SESSION["instagram_url"])): ?>
+                                            <a href="<?php echo $_SESSION["instagram_url"] ?>" target="_blank">
+                                                <div class="icon-circle" style="background-color: #dd2a7b;">
+                                                    <i class="fab fa-instagram text-white"></i>
+                                                </div>
+                                            </a>
+                                        <?php endif; ?>
+                                        <?php if (!empty($_SESSION["twitter_url"])): ?>
+                                            <a href="<?php echo $_SESSION["twitter_url"] ?>" target="_blank">
+                                                <div class="icon-circle" style="background-color: #000000;">
+                                                    <i class="fa-brands fa-x-twitter text-white"></i>
+                                                </div>
+                                            </a>
+                                        <?php endif; ?>
+                                        <a href="<?php echo $_SESSION["linkedin_url"] ?>" target="_blank">
+                                            <div class="icon-circle" style="background-color: #0077B5;">
+                                                <i class="fab fa-linkedin-in text-white"></i>
+                                            </div>
+                                        </a>
+                                    </div>
                                 </div>
-                            </div>
+                                </div>
                         </div>
                     </div>
                 </div>
             </div>
+            <?php include("../components/imageCropper.php"); ?>
+            <!-- Footer -->
+            <?php include("../components/admin/footer.php"); ?>
         </div>
-        <?php include("../components/imageCropper.php"); ?>
-        <!-- Footer -->
-        <?php include("../components/admin/footer.php"); ?>
-    </div>
 </main>
 <?php include("../components/admin/footerMeta.php"); ?>

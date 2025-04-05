@@ -1,6 +1,24 @@
 <?php
 include("../../Models/dbAdminRepo.php");
 
+function textShortener($text, $limit = 30)
+{
+    if (strlen($text) > $limit) {
+        return substr($text, 0, 5) . '...' . substr($text, -5);
+    }
+    return $text;
+}
+
+function currencyFormat($amount)
+{
+    return "BDT " . number_format($amount, 2) . " /-";
+}
+
+function dateTimeFormat($dateTime)
+{
+    return date("d M Y, h:i A", strtotime($dateTime));
+}
+
 function memberID($data)
 {
 
@@ -31,7 +49,7 @@ function memberID($data)
     <link href="../../panel-asset/css/style.css" rel="stylesheet" />
     <!-- CSS Files -->
     <link id="pagestyle" href="../../panel-asset/css/corporate-ui-dashboard.css?v=1.0.0" rel="stylesheet" />
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.4.0/axios.min.js" integrity="sha512-uMtXmF28A2Ab/JJO2t/vYhlaa/3ahUOgj1Zf27M5rOo8/+fcTUVH0/E0ll68njmjrLqOBjXM3V9NiPFL5ywWPQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.13/cropper.min.css">
 </head>
 

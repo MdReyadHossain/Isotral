@@ -133,6 +133,38 @@
                 });
         }, 'image/jpeg', 0.9);
     });
+
+    function searchInvestment(form) {
+        const url = form.action;
+        const key = form.search.value;
+
+        if (key != "") {
+            axios.get(url + "?investment=" + key)
+                .then((response) => {
+                    document.getElementById("investment").innerHTML = response.data;
+                })
+                .catch((error) => console.log("Error: " + error));
+        } else {
+            document.location.href = "accounting#investment";
+            document.location.reload();
+        }
+    }
+
+    function searchTransaction(form) {
+        const url = form.action;
+        const key = form.search.value;
+
+        if (key != "") {
+            axios.get(url + "?transaction=" + key)
+                .then((response) => {
+                    document.getElementById("transaction").innerHTML = response.data;
+                })
+                .catch((error) => console.log("Error: " + error));
+        } else {
+            document.location.href = "accounting#transaction";
+            document.location.reload();
+        }
+    }
 </script>
 </body>
 

@@ -48,7 +48,7 @@
                                 <div class="numbers">
                                     <p class="text-sm mb-0 text-uppercase font-weight-bold">Vault Amount</p>
                                     <h5 class="font-weight-bolder">
-                                        500 BDT
+                                        <?php echo currencyFormat($totalVaultAmount['total_amount'] - $totalInvestments['total_amount']) ?>
                                     </h5>
                                     <p class="mb-0">
                                         <span class="text-success text-sm font-weight-bolder">Total Reserve Amount</span>
@@ -108,42 +108,41 @@
                                         <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Name</th>
                                         <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Phone Number</th>
                                         <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Title</th>
-                                        <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Action</th>
+                                        <th class="text-start text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Action</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <?php
                                     if ($allMembers->num_rows > 0) {
-                                        while ($data = $allMembers->fetch_assoc()) {
-                                            echo "
+                                        while ($data = $allMembers->fetch_assoc()) { ?>
                                             <tr>
                                                 <td class='align-middle text-center text-sm'>
-                                                    <span class='text-xs text-secondary mb-0'>" . memberID($data) . "</span>
+                                                    <span class='text-xs text-secondary mb-0'><?php echo memberID($data); ?></span>
                                                 </td>
                                                 <td>
                                                     <div class='d-flex px-2 py-1 align-items-center'>
                                                         <div>
-                                                            <img src='" . $data['image_url'] . "' alt='Profile Image' class='avatar avatar-sm me-3'>
+                                                            <img src='<?php echo $data['image_url']; ?>' alt='Profile Image' class='avatar avatar-sm me-3'>
                                                         </div>
                                                         <div class='d-flex flex-column justify-content-center'>
-                                                            <h6 class='mb-0 text-sm'>" . $data['name'] . "</h6>
-                                                            <a href='mailto:" . $data['email'] . "' class='text-xs text-secondary mb-0'>" . $data['email'] . "</a>
+                                                            <h6 class='mb-0 text-sm'><?php echo $data['name']; ?></h6>
+                                                            <a href='mailto:<?php echo $data['email']; ?>' class='text-xs text-secondary mb-0'><?php echo $data['email']; ?></a>
                                                         </div>
                                                     </div>
                                                 </td>
                                                 <td class='align-middle text-center text-sm'>
-                                                    <a href='tel:" . $data['phone'] . "' class='text-secondary text-xs font-weight-bold'>" . $data['phone'] . "</a>
+                                                    <a href='tel:<?php echo $data['phone']; ?>' class='text-secondary text-xs font-weight-bold'><?php echo $data['phone']; ?></a>
                                                 </td>
                                                 <td class='align-middle text-center text-sm'>
-                                                    <span class='text-xs text-secondary mb-0'>" . $data['title'] . "</span>
+                                                    <span class='text-xs text-secondary mb-0'><?php echo $data['title']; ?></span>
                                                 </td>
                                                 <td class='align-middle'>
-                                                    <a href='patientView?patient_id=" . $data['id'] . "' class='btn btn-primary font-weight-bold text-xs' data-toggle='tooltip' data-original-title='Edit user'>
+                                                    <a href='patientView?patient_id=<?php echo $data['id']; ?>' class='btn btn-primary font-weight-bold text-xs' data-toggle='tooltip' data-original-title='Edit user'>
                                                         View
                                                     </a>
                                                 </td>
-                                            </tr>";
-                                        }
+                                            </tr>
+                                    <?php }
                                     }
                                     ?>
                                 </tbody>
