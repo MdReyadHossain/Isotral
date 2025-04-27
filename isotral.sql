@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 25, 2025 at 08:44 AM
+-- Generation Time: Apr 27, 2025 at 12:53 PM
 -- Server version: 10.1.38-MariaDB
 -- PHP Version: 7.3.2
 
@@ -41,6 +41,7 @@ CREATE TABLE `admin` (
   `twitter_url` varchar(255) DEFAULT NULL,
   `youtube_url` varchar(255) DEFAULT NULL,
   `linkedin_url` varchar(255) DEFAULT NULL,
+  `vault_source` varchar(255) DEFAULT NULL,
   `updated_at` datetime NOT NULL,
   `created_at` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -49,8 +50,8 @@ CREATE TABLE `admin` (
 -- Dumping data for table `admin`
 --
 
-INSERT INTO `admin` (`id`, `name`, `email`, `phone_first`, `phone_second`, `address`, `address_url`, `embed_map_url`, `facebook_url`, `twitter_url`, `youtube_url`, `linkedin_url`, `updated_at`, `created_at`) VALUES
-(1, 'isotral', 'info.isotral@gmail.com', '+8801771449957', '+8801956394373', 'Nazma Mohol, Naruli, Bogura, Bangladesh', 'https://www.google.com/maps?ll=24.856083,89.388068&z=16&t=m&hl=en&gl=BD&mapclient=embed&q=24%C2%B051%2721.9%22N+89%C2%B023%2717.0%22E+24.856083,+89.388056@24.8560833,89.3880556', 'https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3620.227365986334!2d89.38806799999999!3d24.856082999999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjTCsDUxJzIxLjkiTiA4OcKwMjMnMTcuMCJF!5e0!3m2!1sen!2sbd!4v1738864585255!5m2!1sen!2sbd', 'https://www.facebook.com/isotral', 'https://x.com/isotral13091', 'https://www.youtube.com/@Isotral-n7o', 'https://www.linkedin.com/company/isotral', '2025-02-07 22:00:00', '2025-02-07 22:00:00');
+INSERT INTO `admin` (`id`, `name`, `email`, `phone_first`, `phone_second`, `address`, `address_url`, `embed_map_url`, `facebook_url`, `twitter_url`, `youtube_url`, `linkedin_url`, `vault_source`, `updated_at`, `created_at`) VALUES
+(1, 'isotral', 'info.isotral@gmail.com', '+8801771449957', '+8801956394373', 'Nazma Mohol, Naruli, Bogura, Bangladesh', 'https://www.google.com/maps?ll=24.856083,89.388068&z=16&t=m&hl=en&gl=BD&mapclient=embed&q=24%C2%B051%2721.9%22N+89%C2%B023%2717.0%22E+24.856083,+89.388056@24.8560833,89.3880556', 'https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3620.227365986334!2d89.38806799999999!3d24.856082999999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjTCsDUxJzIxLjkiTiA4OcKwMjMnMTcuMCJF!5e0!3m2!1sen!2sbd!4v1738864585255!5m2!1sen!2sbd', 'https://www.facebook.com/isotral', 'https://x.com/isotral13091', 'https://www.youtube.com/@Isotral-n7o', 'https://www.linkedin.com/company/isotral', '01771449957', '2025-02-07 22:00:00', '2025-02-07 22:00:00');
 
 -- --------------------------------------------------------
 
@@ -131,6 +132,28 @@ CREATE TABLE `fund` (
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `invest`
+--
+
+CREATE TABLE `invest` (
+  `id` int(11) NOT NULL,
+  `title` varchar(255) NOT NULL,
+  `description` varchar(255) DEFAULT NULL,
+  `amount` double NOT NULL,
+  `updated_at` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `created_at` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `invest`
+--
+
+INSERT INTO `invest` (`id`, `title`, `description`, `amount`, `updated_at`, `created_at`) VALUES
+(1, 'Website host', 'For website host on ryzen web host 5gb nvme ssd package', 800, '2025-04-05 12:43:42', '2025-04-05 12:43:42');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `login`
 --
 
@@ -159,7 +182,49 @@ INSERT INTO `login` (`id`, `user_id`, `ip`, `location`, `created_at`, `updated_a
 (9, 8, '27.147.204.204', 'Rajshahi Division, Bangladesh', '2025-03-23 21:36:35', '2025-03-23 21:36:35'),
 (10, 8, '27.147.204.204', 'Rajshahi Division, Bangladesh', '2025-03-23 21:38:32', '2025-03-23 21:38:32'),
 (11, 8, '27.147.204.204', 'Rajshahi Division, Bangladesh', '2025-03-23 21:51:16', '2025-03-23 21:51:16'),
-(12, 8, '27.147.204.204', 'Rajshahi Division, Bangladesh', '2025-03-23 22:11:07', '2025-03-23 22:11:07');
+(12, 8, '27.147.204.204', 'Rajshahi Division, Bangladesh', '2025-03-23 22:11:07', '2025-03-23 22:11:07'),
+(13, 8, '27.147.204.204', 'Rajshahi Division, Bangladesh', '2025-03-26 11:28:34', '2025-03-26 11:28:34'),
+(14, 8, '27.147.204.204', 'Rajshahi Division, Bangladesh', '2025-03-27 09:07:08', '2025-03-27 09:07:08'),
+(15, 7, '27.147.204.204', 'Rajshahi Division, Bangladesh', '2025-03-27 09:07:24', '2025-03-27 09:07:24'),
+(16, 8, '27.147.204.204', 'Rajshahi Division, Bangladesh', '2025-03-27 14:53:42', '2025-03-27 14:53:42'),
+(17, 8, '27.147.204.204', 'Rajshahi Division, Bangladesh', '2025-03-28 11:27:40', '2025-03-28 11:27:40'),
+(18, 1, '27.147.204.204', 'Rajshahi Division, Bangladesh', '2025-03-30 20:47:58', '2025-03-30 20:47:58'),
+(19, 5, '27.147.204.204', 'Rajshahi Division, Bangladesh', '2025-03-30 20:48:44', '2025-03-30 20:48:44'),
+(20, 1, '27.147.204.204', 'Rajshahi Division, Bangladesh', '2025-04-02 11:29:10', '2025-04-02 11:29:10'),
+(21, 5, '27.147.204.204', 'Rajshahi Division, Bangladesh', '2025-04-02 11:29:29', '2025-04-02 11:29:29'),
+(22, 4, '27.147.204.204', 'Rajshahi Division, Bangladesh', '2025-04-02 11:30:16', '2025-04-02 11:30:16'),
+(23, 8, '27.147.204.204', 'Rajshahi Division, Bangladesh', '2025-04-03 20:25:15', '2025-04-03 20:25:15'),
+(24, 8, '27.147.204.204', 'Rajshahi Division, Bangladesh', '2025-04-03 20:27:13', '2025-04-03 20:27:13'),
+(25, 8, '27.147.204.204', 'Rajshahi Division, Bangladesh', '2025-04-03 20:27:55', '2025-04-03 20:27:55'),
+(26, 8, '27.147.204.204', 'Rajshahi Division, Bangladesh', '2025-04-03 21:47:32', '2025-04-03 21:47:32'),
+(27, 5, '27.147.204.204', 'Rajshahi Division, Bangladesh', '2025-04-03 21:51:32', '2025-04-03 21:51:32'),
+(28, 5, '27.147.204.204', 'Rajshahi Division, Bangladesh', '2025-04-03 22:29:44', '2025-04-03 22:29:44'),
+(29, 8, '27.147.204.204', 'Rajshahi Division, Bangladesh', '2025-04-03 22:42:04', '2025-04-03 22:42:04'),
+(30, 8, '27.147.204.204', 'Rajshahi Division, Bangladesh', '2025-04-04 08:45:18', '2025-04-04 08:45:18'),
+(31, 5, '27.147.204.204', 'Rajshahi Division, Bangladesh', '2025-04-04 17:16:14', '2025-04-04 17:16:14'),
+(32, 8, '27.147.204.204', 'Rajshahi Division, Bangladesh', '2025-04-06 14:16:58', '2025-04-06 14:16:58'),
+(33, 8, '27.147.204.204', 'Rajshahi Division, Bangladesh', '2025-04-06 17:19:31', '2025-04-06 17:19:31'),
+(34, 8, '27.147.204.204', 'Rajshahi Division, Bangladesh', '2025-04-06 17:20:30', '2025-04-06 17:20:30'),
+(35, 6, '27.147.204.204', 'Rajshahi Division, Bangladesh', '2025-04-09 20:40:52', '2025-04-09 20:40:52'),
+(36, 8, '27.147.204.204', 'Rajshahi Division, Bangladesh', '2025-04-09 20:41:42', '2025-04-09 20:41:42'),
+(37, 7, '27.147.204.204', 'Rajshahi Division, Bangladesh', '2025-04-09 21:00:36', '2025-04-09 21:00:36'),
+(38, 8, '27.147.204.204', 'Rajshahi Division, Bangladesh', '2025-04-27 11:26:31', '2025-04-27 11:26:31'),
+(39, 6, '27.147.204.204', 'Rajshahi Division, Bangladesh', '2025-04-27 11:49:29', '2025-04-27 11:49:29');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `message`
+--
+
+CREATE TABLE `message` (
+  `id` int(11) NOT NULL,
+  `from_id` int(11) DEFAULT NULL,
+  `message` varchar(255) NOT NULL,
+  `to_id` int(11) DEFAULT NULL,
+  `updated_at` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `created_at` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -182,11 +247,15 @@ CREATE TABLE `otp` (
 
 CREATE TABLE `user` (
   `id` int(11) NOT NULL,
+  `user_id` int(11) DEFAULT NULL,
   `priority` int(11) DEFAULT NULL,
   `name` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
+  `website` varchar(255) DEFAULT NULL,
   `facebook_url` varchar(255) DEFAULT NULL,
   `linkedin_url` varchar(255) DEFAULT NULL,
+  `instagram_url` varchar(255) DEFAULT NULL,
+  `twitter_url` varchar(255) DEFAULT NULL,
   `image_url` varchar(255) DEFAULT NULL,
   `phone` varchar(255) DEFAULT NULL,
   `address` varchar(255) DEFAULT NULL,
@@ -204,15 +273,43 @@ CREATE TABLE `user` (
 -- Dumping data for table `user`
 --
 
-INSERT INTO `user` (`id`, `priority`, `name`, `email`, `facebook_url`, `linkedin_url`, `image_url`, `phone`, `address`, `profession`, `title`, `sa_title`, `password`, `type`, `status`, `created_at`, `updated_at`) VALUES
-(1, 2, 'Reyad Hossain', 'reyadhosen@gmail.com', 'https://www.facebook.com/mdreyadhossain.rh', 'https://www.linkedin.com/in/mdreyadhossain/', 'https://res.cloudinary.com/dmcppzpgl/image/upload/v1741548381/profile-3_c7ofbj.jpg', '01956394373', 'Bogura, Bangladesh', 'Software Engineer', 'Vice President of Isotral', 'Co-Founder of Isotral', '000000', 'SUPER_ADMIN', 'ACTIVE', '2025-02-07 00:00:00', '2025-02-07 00:00:00'),
-(3, 4, 'Md Maruf Raihan', 'marufraihan99@gmail.com', 'https://www.facebook.com/shakil.islam.37625843', 'https://www.linkedin.com/in/maruf-raihan27/', 'https://res.cloudinary.com/dmcppzpgl/image/upload/v1741549441/maruf_loqxpv.jpg', '01762749948', 'Bogura, Bangladesh', 'Textile Engineer', 'CEO of Blue Dot', NULL, '000000', 'ADMIN', 'ACTIVE', '2025-02-08 12:21:13', '2025-02-08 12:21:13'),
-(4, 7, 'S.M. Kamrul Hasan Koche', 'kamrulkoche@gmail.com', 'https://www.facebook.com/kamrul.hasan.610715', 'https://www.linkedin.com/in/kamrul-hasan-koche/', 'https://res.cloudinary.com/dmcppzpgl/image/upload/v1741548642/kamrul_zivg8b.jpg', '01755555555', 'Barishal, Bangladesh', 'Software Engineer', 'Director of QuadroCode', NULL, '000000', 'ADMIN', 'ACTIVE', '2025-02-12 00:00:00', '2025-02-05 00:00:00'),
-(5, 3, 'Munira Zebin', 'munirazebin229@gmail.com', 'https://www.facebook.com/christinajenifer.christinajenifar', 'https://www.linkedin.com/in/munirazebin/', 'https://res.cloudinary.com/dmcppzpgl/image/upload/v1741852816/isotral-zebin_liv5ot.jpg', '01788888888', 'Dhaka, Bangladesh', 'SQA Engineer', 'CEO of QuadroCode', NULL, '000000', 'ADMIN', 'ACTIVE', '2025-02-07 00:00:00', '2025-02-07 00:00:00'),
-(6, 1, 'Najmus Sakib', 'najmusnishad2020@gmail.com', 'https://www.facebook.com/najmus.sakib.522', 'https://www.linkedin.com/in/najmus-sakib-66050a215/', 'https://res.cloudinary.com/dmcppzpgl/image/upload/v1741548420/profile-1_gjr6rd.png', '01771449957', 'Bogura, Bangladesh', 'Textile Engineer', 'President of Isotral', 'Founder of Isotral', '000000', 'SUPER_ADMIN', 'ACTIVE', '2025-03-10 00:00:00', '2025-03-10 00:00:00'),
-(7, 5, 'Md Shahriar Islam', 'shahriarjobs111@gmail.com', 'https://www.facebook.com/profile.php?id=100031429620360', 'https://www.linkedin.com/in/md-shahriar-islam-22b415182/', 'https://res.cloudinary.com/dmcppzpgl/image/upload/v1741548444/69a35321-bcb4-44e3-9881-df98df480be0_rdxf9o.jpg', '01777610833', 'Bogura, Bangladesh', 'Aerospace Engineer', 'HR head of Isotral', NULL, '000000', 'ADMIN', 'ACTIVE', '2025-03-10 00:00:00', '2025-03-10 00:00:00'),
-(8, 6, 'Nasim Reza Hridoy', 'reza0445nrh@gmail.com', 'https://www.facebook.com/profile.php?id=100008106511380', 'https://www.linkedin.com/in/nasim-reza-hridoy-ab88b3246/', 'https://res.cloudinary.com/dmcppzpgl/image/upload/v1741548641/reza_pj0qne.jpg', '01717365484', 'Dhaka, Bangladesh', 'Software Engineer', 'Senior Director of QuadroCode', NULL, '000000', 'ADMIN', 'ACTIVE', '2025-03-10 00:00:00', '2025-03-10 00:00:00'),
-(9, NULL, 'Leon', 'leon@gmail.com', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '00000', 'MEMBER', 'PENDING', '2025-03-10 00:00:00', '2025-03-10 00:00:00');
+INSERT INTO `user` (`id`, `user_id`, `priority`, `name`, `email`, `website`, `facebook_url`, `linkedin_url`, `instagram_url`, `twitter_url`, `image_url`, `phone`, `address`, `profession`, `title`, `sa_title`, `password`, `type`, `status`, `created_at`, `updated_at`) VALUES
+(1, 12, 2, 'Reyad Hossain', 'reyadhosen@gmail.com', NULL, 'https://www.facebook.com/mdreyadhossain.rh', 'https://www.linkedin.com/in/mdreyadhossain/', NULL, NULL, 'https://res.cloudinary.com/dmcppzpgl/image/upload/v1742984675/Reyad-pro_lub6kl.jpg', '01956394373', 'Bogura, Bangladesh', 'Software Engineer', 'Vice President of Isotral', 'Co-Founder of Isotral', '000000', 'SUPER_ADMIN', 'ACTIVE', '2025-02-07 00:00:00', '2025-02-07 00:00:00'),
+(3, 31, 4, 'Md Maruf Raihan', 'marufraihan99@gmail.com', NULL, 'https://www.facebook.com/shakil.islam.37625843', 'https://www.linkedin.com/in/maruf-raihan27/', NULL, NULL, 'https://res.cloudinary.com/dmcppzpgl/image/upload/v1741549441/maruf_loqxpv.jpg', '01762749948', 'Bogura, Bangladesh', 'Textile Engineer', 'CEO of Blue Dot', NULL, '000000', 'ADMIN', 'ACTIVE', '2025-02-08 12:21:13', '2025-02-08 12:21:13'),
+(4, 23, 6, 'S.M. Kamrul Hasan Koche', 'kamrulkoche@gmail.com', NULL, 'https://www.facebook.com/kamrul.hasan.610715', 'https://www.linkedin.com/in/kamrul-hasan-koche/', NULL, NULL, 'https://res.cloudinary.com/dmcppzpgl/image/upload/v1741548642/kamrul_zivg8b.jpg', '01755555555', 'Barishal, Bangladesh', 'Software Engineer', 'Director of QuadroCode', NULL, '000000', 'ADMIN', 'ACTIVE', '2025-02-12 00:00:00', '2025-02-05 00:00:00'),
+(5, 21, 3, 'Munira Zebin', 'munirazebin229@gmail.com', NULL, 'https://www.facebook.com/christinajenifer.christinajenifar', 'https://www.linkedin.com/in/munirazebin/', NULL, NULL, 'https://res.cloudinary.com/dmcppzpgl/image/upload/v1743780987/php7AAA_id8dw4.jpg', '01788888888', 'Dhaka, Bangladesh', 'SQA Engineer', 'CEO of QuadroCode', NULL, '000000', 'ADMIN', 'ACTIVE', '2025-02-07 00:00:00', '2025-04-04 17:36:27'),
+(6, 11, 1, 'Najmus Sakib', 'najmusnishad2020@gmail.com', NULL, 'https://www.facebook.com/najmus.sakib.522', 'https://www.linkedin.com/in/najmus-sakib-66050a215/', NULL, NULL, 'https://res.cloudinary.com/dmcppzpgl/image/upload/v1741548420/profile-1_gjr6rd.png', '01771449957', 'Bogura, Bangladesh', 'Textile Engineer', 'President of Isotral', 'Founder of Isotral', '000000', 'SUPER_ADMIN', 'ACTIVE', '2025-03-10 00:00:00', '2025-03-10 00:00:00'),
+(7, 13, 7, 'Md Shahriar Islam', 'shahriarjobs111@gmail.com', NULL, 'https://www.facebook.com/profile.php?id=100031429620360', 'https://www.linkedin.com/in/md-shahriar-islam-22b415182/', NULL, NULL, 'https://res.cloudinary.com/dmcppzpgl/image/upload/v1741548444/69a35321-bcb4-44e3-9881-df98df480be0_rdxf9o.jpg', '01777610833', 'Bogura, Bangladesh', 'Aerospace Engineer', 'HR head of Isotral', NULL, '000000', 'ADMIN', 'ACTIVE', '2025-03-10 00:00:00', '2025-04-09 21:03:51'),
+(8, 22, 5, 'Nasim Reza Hridoy', 'reza0445nrh@gmail.com', '', 'https://www.facebook.com/profile.php?id=100008106511380', 'https://www.linkedin.com/in/nasim-reza-hridoy-ab88b3246/', 'https://www.linkedin.com/in/nasim-reza-hridoy-ab88b3246/', 'https://www.linkedin.com/in/nasim-reza-hridoy-ab88b3246/', 'https://res.cloudinary.com/dmcppzpgl/image/upload/v1741548641/reza_pj0qne.jpg', '01717365484', 'Dhaka, Bangladesh', 'Software Engineer', 'Senior Director of QuadroCode', NULL, '000000', 'ADMIN', 'ACTIVE', '2025-03-10 00:00:00', '2025-04-27 11:32:51'),
+(9, NULL, NULL, 'Leon', 'leon@gmail.com', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '00000', 'MEMBER', 'PENDING', '2025-03-10 00:00:00', '2025-03-10 00:00:00');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `vault`
+--
+
+CREATE TABLE `vault` (
+  `id` int(11) NOT NULL,
+  `source` varchar(255) NOT NULL,
+  `vault_source` varchar(255) NOT NULL,
+  `trans_id` varchar(255) NOT NULL,
+  `amount` double DEFAULT NULL,
+  `user_id` int(11) DEFAULT NULL,
+  `status` tinyint(1) NOT NULL,
+  `updated_at` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `created_at` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `vault`
+--
+
+INSERT INTO `vault` (`id`, `source`, `vault_source`, `trans_id`, `amount`, `user_id`, `status`, `updated_at`, `created_at`) VALUES
+(1, 'IBBL LTD', '01956394373', 'CBA4ONWCT4', 450, 1, 1, '2025-04-05 02:38:41', '2025-04-05 02:38:41'),
+(2, '01771449957', '01956394373', 'CCE5L2SFSB', 200, 6, 0, '2025-04-05 02:42:55', '2025-04-05 02:42:55'),
+(3, '01771449957', '01956394373', 'CCB0IQM19Y', 200, 6, 1, '2025-04-05 02:43:41', '2025-04-05 02:43:41'),
+(4, '01717365484', '01771449957', 'CCWWWWWWW', 200, 8, 0, '2025-04-10 00:56:11', '2025-04-10 00:56:11');
 
 --
 -- Indexes for dumped tables
@@ -251,11 +348,23 @@ ALTER TABLE `fund`
   ADD KEY `user_id` (`user_id`);
 
 --
+-- Indexes for table `invest`
+--
+ALTER TABLE `invest`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `login`
 --
 ALTER TABLE `login`
   ADD PRIMARY KEY (`id`),
   ADD KEY `user_id` (`user_id`);
+
+--
+-- Indexes for table `message`
+--
+ALTER TABLE `message`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `otp`
@@ -268,6 +377,13 @@ ALTER TABLE `otp`
 --
 ALTER TABLE `user`
   ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `vault`
+--
+ALTER TABLE `vault`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `user_id` (`user_id`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -304,10 +420,22 @@ ALTER TABLE `fund`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
+-- AUTO_INCREMENT for table `invest`
+--
+ALTER TABLE `invest`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
 -- AUTO_INCREMENT for table `login`
 --
 ALTER TABLE `login`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
+
+--
+-- AUTO_INCREMENT for table `message`
+--
+ALTER TABLE `message`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `otp`
@@ -320,6 +448,12 @@ ALTER TABLE `otp`
 --
 ALTER TABLE `user`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+
+--
+-- AUTO_INCREMENT for table `vault`
+--
+ALTER TABLE `vault`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- Constraints for dumped tables
@@ -342,6 +476,12 @@ ALTER TABLE `fund`
 --
 ALTER TABLE `login`
   ADD CONSTRAINT `login_ibfk_2` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`) ON DELETE SET NULL ON UPDATE SET NULL;
+
+--
+-- Constraints for table `vault`
+--
+ALTER TABLE `vault`
+  ADD CONSTRAINT `vault_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`) ON DELETE SET NULL ON UPDATE SET NULL;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

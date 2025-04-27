@@ -16,9 +16,9 @@ if ($query) {
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="icon" type="image/png" href="../../asset/logo/Isotral-favicon.png">
+    <link rel="icon" type="image/png" href="<?php echo $user["image_url"] ?>">
     <title>
-        Admin Panel - Isotral
+        <?php echo $user["name"] ?> - <?php echo $user["profession"] ?>
     </title>
     <!--     Fonts and icons     -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -37,6 +37,75 @@ if ($query) {
         body {
             background-color: rgb(228, 228, 228);
         }
+
+        .profile-image {
+            z-index: 20;
+        }
+
+
+        .share-info {
+            position: absolute;
+            display: inline-block;
+            top: 90%;
+            bottom: 0;
+            left: 85%;
+            right: 0;
+            color: rgb(68, 158, 255);
+            font-size: 200%;
+        }
+
+        .share-info:focus {
+            color: rgb(68, 158, 255);
+        }
+
+        #snackbar {
+            visibility: hidden;
+            /* Hidden by default */
+            min-width: 250px;
+            max-width: 80%;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            border-radius: 10px;
+            padding: 16px 24px;
+            position: fixed;
+            top: 20px;
+            /* ✅ Top of screen */
+            left: 50%;
+            /* ✅ Center horizontally */
+            transform: translateX(-50%);
+            /* Only move in X axis */
+            z-index: 9999;
+            font-size: 16px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Show the snackbar */
+        #snackbar.show {
+            visibility: visible;
+            animation: fadein 0.5s, fadeout 0.5s 2.5s;
+        }
+
+        /* Animations */
+        @keyframes fadein {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeout {
+            from {
+                opacity: 1;
+            }
+
+            to {
+                opacity: 0;
+            }
+        }
     </style>
 </head>
 
@@ -45,13 +114,17 @@ if ($query) {
     <?php if ($query && !empty($user)): ?>
         <div class="d-flex justify-content-center">
             <div class="col-md-4">
-                <div class="card card-profile">
+                <div class="cover-img card card-profile">
                     <img src="../../asset/img/isotral-cover.jpg" alt="Image placeholder" class="card-img-top">
-                    <div class="row justify-content-center">
+                    <div class="profile-image row justify-content-center">
+                        <!-- <div class="share-info" onclick="copyToClipboard()">
+                            <div class="p-2">
+                                <i class="fa-solid fa-square-share-nodes"></i>
+                            </div>
+                        </div> -->
                         <div class="col-4 col-lg-4 order-lg-2">
                             <div class="mt-n4 mt-lg-n6 mb-4 mb-lg-0">
-                                <label class="label custom-file-upload profile-image" data-toggle="tooltip" title="Change your avatar">
-                                    <input type="file" class="d-none" id="imageInput" name="image_url" accept="image/*">
+                                <label class="label">
                                     <img src="<?php echo $user["image_url"] ?>" class="rounded-circle img-fluid border border-2 border-white" alt="<?php echo $user["name"] ?>">
                                 </label>
                             </div>
@@ -111,7 +184,7 @@ if ($query) {
                                 <?php endif; ?>
 
                                 <div class="mt-4 text-center">
-                                    <div class="mb-2"> Contact With Me </div>
+                                    <div class="mb-2">Contact With Me </div>
                                     <div class="d-flex w-100 justify-content-center gap-2">
                                         <?php if (!empty($user["facebook_url"])): ?>
                                             <a href="<?php echo $user["facebook_url"] ?>" target="_blank">
@@ -142,6 +215,9 @@ if ($query) {
                                     </div>
                                 </div>
                                 </div>
+                                <div class="mt-4 text-center">
+                                    <div class="mb-2 text-sm text-lighter">Powered By <a href="../../">Isotral</a></div>
+                                </div>
                         </div>
                     </div>
                 </div>
@@ -157,9 +233,36 @@ if ($query) {
         </div>
     <?php endif; ?>
 
+
     <!-- Digital Card End -->
 
     <!--   Core JS Files   -->
+    <script>
+        document.querySelector('.share-info').addEventListener('touchstart', copyToClipboard);
+
+        function showSnackbar(message) {
+            var snackbar = document.getElementById("snackbar");
+            snackbar.innerText = message; // Set custom message
+            snackbar.className = "show";
+
+            setTimeout(function() {
+                snackbar.className = snackbar.className.replace("show", "");
+            }, 3000); // Hide after 3 seconds
+        }
+
+        function copyToClipboard() {
+            navigator.share({
+                    title: document.title,
+                    text: 'Check out this page!',
+                    url: window.location.href
+                }).then(() => {
+                    console.log('Thanks for sharing!');
+                })
+                .catch((error) => {
+                    console.error('Error sharing:', error);
+                });
+        }
+    </script>
     <script src="../../panel-asset/js/core/popper.min.js"></script>
     <script src="../../panel-asset/js/core/bootstrap.min.js"></script>
     <script src="../../panel-asset/js/plugins/perfect-scrollbar.min.js"></script>
@@ -176,6 +279,7 @@ if ($query) {
 
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.13/cropper.min.js"></script>
+
 </body>
 
 </html>
