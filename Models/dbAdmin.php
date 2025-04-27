@@ -1,11 +1,31 @@
 <?php
 require "dbConnect.php";
 
+function searchMember($key)
+{
+    $db = connect();
+
+    $sql = "SELECT * FROM user WHERE status = 'ACTIVE' AND (id LIKE ? OR name LIKE ?) ORDER BY id DESC";
+    $stmt = $db->prepare($sql);
+    $search = $key;
+    $search = "%" . $search . "%";
+    $stmt->bind_param("ss", $search, $search);
+
+    $stmt->execute();
+    $result = $stmt->get_result();
+
+    $stmt->close();
+    $db->close();
+
+    return $result;
+}
+
+
 function searchTransaction($key)
 {
     $db = connect();
 
-    $sql = "SELECT * FROM vault WHERE trans_id LIKE ? OR source LIKE ?";
+    $sql = "SELECT * FROM vault WHERE trans_id LIKE ? OR source LIKE ? ORDER BY id DESC";
     $stmt = $db->prepare($sql);
     $search = $key;
     $search = "%" . $search . "%";
@@ -25,7 +45,7 @@ function searchInvestment($key)
 {
     $db = connect();
 
-    $sql = "SELECT * FROM invest WHERE title LIKE ?";
+    $sql = "SELECT * FROM invest WHERE title LIKE ? ORDER BY id DESC";
     $stmt = $db->prepare($sql);
     $search = $key;
     $search = "%" . $search . "%";
@@ -53,6 +73,21 @@ function updateAdminProfile($id, $name, $email, $phone, $address, $facebook_url,
         $db->close();
     }
 }
+
+function changePassword($id, $newPass)
+{
+    $db = connect();
+    $currentDateTime = date('Y-m-d H:i:s');
+    try {
+        $updateAdminSql = "UPDATE user SET password = '$newPass', updated_at = '$currentDateTime' WHERE id = '$id'";
+        $db->query($updateAdminSql);
+    } catch (Exception $error) {
+        echo "Error $error : " . $db->error;
+    } finally {
+        $db->close();
+    }
+}
+
 
 function updateAdminImage($id, $image_url)
 {

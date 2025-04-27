@@ -86,67 +86,122 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-12 col-md-12">
-                <div class="card mb-4 h-100">
-                    <div class="card-header pb-0">
-                        <form action="../../Controller/doctor/searchPatient" method="GET" onsubmit="searchPatient(this); return false;">
-                            <div class="d-flex align-items-center">
-                                <h6 class="m-1">All Members</h6>
-                                <input type="text" class="form-control w-lg-25 ms-auto text-xxs font-weight-bolder" id="search" name="search" placeholder="Search" aria-describedby="basic-addon2">
-                                <div class="input-group-append">
-                                    <button class="input-group-text" id="basic-addon2" type="submit"><i class="fas fa-search p-1"></i></button>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card mb-4 h-100">
+                        <div class="card-header pb-0">
+                            <form action="../../Controllers/admin/searchMember" method="GET" onsubmit="searchMember(this); return false;">
+                                <div class="d-flex align-items-center">
+                                    <h6 class="m-1">All Members</h6>
+                                    <input type="text" title="Search by ID or Name" class="form-control w-lg-25 ms-auto text-xxs font-weight-bolder" id="search" name="search" placeholder="Search by ID or Name" aria-describedby="basic-addon2">
+                                    <div class="input-group-append">
+                                        <button class="input-group-text" id="basic-addon2" type="submit"><i class="fas fa-search p-1"></i></button>
+                                    </div>
                                 </div>
+                            </form>
+                        </div>
+                        <div class="card-body px-0 pt-0 pb-2" style="height: 50vh; overflow-y: scroll;">
+                            <div class="table-responsive p-0" id="member">
+                                <table class="table table-hover align-items-center mb-0">
+                                    <thead>
+                                        <tr>
+                                            <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">ID</th>
+                                            <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Name</th>
+                                            <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Phone Number</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <?php
+                                        if ($allMembers->num_rows > 0) {
+                                            while ($data = $allMembers->fetch_assoc()) { ?>
+                                                <tr onclick="window.location.href='patientView?patient_id=<?php echo $data['id']; ?>'" style="cursor: pointer;">
+                                                    <td class='align-middle text-center text-sm'>
+                                                        <span class='text-xs text-secondary mb-0'><?php echo memberID($data); ?></span>
+                                                    </td>
+                                                    <td>
+                                                        <div class='d-flex px-2 py-1 align-items-center'>
+                                                            <div>
+                                                                <img src='<?php echo $data['image_url']; ?>' alt='Profile Image' class='avatar avatar-sm me-3'>
+                                                            </div>
+                                                            <div class='d-flex flex-column justify-content-center'>
+                                                                <h6 class='mb-0 text-sm'><?php echo $data['name']; ?></h6>
+                                                                <a href='mailto:<?php echo $data['email']; ?>' class='text-xs text-secondary mb-0'><?php echo $data['email']; ?></a>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td class='align-middle text-center text-sm'>
+                                                        <a href='tel:<?php echo $data['phone']; ?>' class='text-secondary text-xs font-weight-bold'><?php echo $data['phone']; ?></a>
+                                                    </td>
+                                                </tr>
+                                        <?php }
+                                        }
+                                        ?>
+                                    </tbody>
+                                </table>
                             </div>
-                        </form>
+                        </div>
                     </div>
-                    <div class="card-body px-0 pt-0 pb-2" style="height: 50vh; overflow-y: scroll;">
-                        <div class="table-responsive p-0" id="patient">
-                            <table class="table align-items-center mb-0">
-                                <thead>
-                                    <tr>
-                                        <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">ID</th>
-                                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Name</th>
-                                        <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Phone Number</th>
-                                        <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Title</th>
-                                        <th class="text-start text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Action</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <?php
-                                    if ($allMembers->num_rows > 0) {
-                                        while ($data = $allMembers->fetch_assoc()) { ?>
-                                            <tr>
-                                                <td class='align-middle text-center text-sm'>
-                                                    <span class='text-xs text-secondary mb-0'><?php echo memberID($data); ?></span>
-                                                </td>
-                                                <td>
-                                                    <div class='d-flex px-2 py-1 align-items-center'>
-                                                        <div>
-                                                            <img src='<?php echo $data['image_url']; ?>' alt='Profile Image' class='avatar avatar-sm me-3'>
+                </div>
+                <div class="col-md-6">
+                    <div class="card mb-4 h-100">
+                        <div class="card-header pb-0">
+                            <form action="../../Controller/doctor/searchPatient" method="GET" onsubmit="searchPatient(this); return false;">
+                                <div class="d-flex align-items-center">
+                                    <h6 class="m-1">Recent Messages</h6>
+                                    <input type="text" class="form-control w-lg-25 ms-auto text-xxs font-weight-bolder" id="search" name="search" placeholder="Search" aria-describedby="basic-addon2">
+                                    <div class="input-group-append">
+                                        <button class="input-group-text" id="basic-addon2" type="submit"><i class="fas fa-search p-1"></i></button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="card-body px-0 pt-0 pb-2" style="height: 50vh; overflow-y: scroll;">
+                            <div class="table-responsive p-0" id="patient">
+                                <table class="table align-items-center mb-0">
+                                    <thead>
+                                        <tr>
+                                            <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Name</th>
+                                            <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Message</th>
+                                            <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Date</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <?php
+                                        if ($allMembers->num_rows > 0) {
+                                            while ($data = $allMembers->fetch_assoc()) { ?>
+                                                <tr>
+                                                    <td class='align-middle text-center text-sm'>
+                                                        <span class='text-xs text-secondary mb-0'><?php echo memberID($data); ?></span>
+                                                    </td>
+                                                    <td>
+                                                        <div class='d-flex px-2 py-1 align-items-center'>
+                                                            <div>
+                                                                <img src='<?php echo $data['image_url']; ?>' alt='Profile Image' class='avatar avatar-sm me-3'>
+                                                            </div>
+                                                            <div class='d-flex flex-column justify-content-center'>
+                                                                <h6 class='mb-0 text-sm'><?php echo $data['name']; ?></h6>
+                                                                <a href='mailto:<?php echo $data['email']; ?>' class='text-xs text-secondary mb-0'><?php echo $data['email']; ?></a>
+                                                            </div>
                                                         </div>
-                                                        <div class='d-flex flex-column justify-content-center'>
-                                                            <h6 class='mb-0 text-sm'><?php echo $data['name']; ?></h6>
-                                                            <a href='mailto:<?php echo $data['email']; ?>' class='text-xs text-secondary mb-0'><?php echo $data['email']; ?></a>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                                <td class='align-middle text-center text-sm'>
-                                                    <a href='tel:<?php echo $data['phone']; ?>' class='text-secondary text-xs font-weight-bold'><?php echo $data['phone']; ?></a>
-                                                </td>
-                                                <td class='align-middle text-center text-sm'>
-                                                    <span class='text-xs text-secondary mb-0'><?php echo $data['title']; ?></span>
-                                                </td>
-                                                <td class='align-middle'>
-                                                    <a href='patientView?patient_id=<?php echo $data['id']; ?>' class='btn btn-primary font-weight-bold text-xs' data-toggle='tooltip' data-original-title='Edit user'>
-                                                        View
-                                                    </a>
-                                                </td>
-                                            </tr>
-                                    <?php }
-                                    }
-                                    ?>
-                                </tbody>
-                            </table>
+                                                    </td>
+                                                    <td class='align-middle text-center text-sm'>
+                                                        <a href='tel:<?php echo $data['phone']; ?>' class='text-secondary text-xs font-weight-bold'><?php echo $data['phone']; ?></a>
+                                                    </td>
+                                                    <td class='align-middle text-center text-sm'>
+                                                        <span class='text-xs text-secondary mb-0'><?php echo $data['title']; ?></span>
+                                                    </td>
+                                                    <td class='align-middle'>
+                                                        <a href='patientView?patient_id=<?php echo $data['id']; ?>' class='btn btn-primary font-weight-bold text-xs' data-toggle='tooltip' data-original-title='Edit user'>
+                                                            View
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                        <?php }
+                                        }
+                                        ?>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
                 </div>

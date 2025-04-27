@@ -111,7 +111,7 @@
             </div>
             <div class="col-md-4">
                 <div class="card card-profile mt-6">
-                    <!-- <img src="../../asset/img/isotral-cover.jpg" alt="Image placeholder" class="card-img-top"> -->
+                    <img src="../../asset/img/isotral-cover.jpg" alt="Image placeholder" class="card-img-top">
                     <div class="row justify-content-center">
                         <div class="col-4 col-lg-4 order-lg-2">
                             <div class="mt-n4 mt-lg-n6 mb-4 mb-lg-0">
@@ -209,6 +209,45 @@
                                 </div>
                         </div>
                     </div>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="card" id="change-password">
+                    <div class="card-header pb-0">
+                        <div class="d-flex align-items-center">
+                            <p class="mb-0"><b>Change Password</b></p>
+                        </div>
+                        <?php
+                        if (isset($_COOKIE["chng-pass"]))
+                            echo $_COOKIE["chng-pass"];
+                        ?>
+                    </div>
+                    <form action="../../Controllers/admin/changePasswordController" method="POST">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label for="example-text-input" class="form-control-label">Old Password</label> <span id='old-pass'></span>
+                                        <input class="form-control" id="password" placeholder="Type your login password" autocomplete="off" type="password" name="old-pass" onkeyup="oldPass(this.value)" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="example-text-input" class="form-control-label">New Password</label>
+                                        <input class="form-control" type="password" id="new-pass" placeholder="Password must be at least 6 characters long" autocomplete="off" name="new-pass" onkeyup="newPass(this.value)" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="example-text-input" class="form-control-label">Confirm Password</label> <span class='' id='con-pass-error'></span>
+                                        <input class="form-control" type="password" placeholder="Retype New Password" id="con-pass" autocomplete="off" name="con-pass" onkeyup="confirmPass(this.value)" required>
+                                        <p class="text-danger"></p>
+                                    </div>
+                                </div>
+                                <button type="submit" class="btn btn-primary ms-auto">Change</button>
+                            </div>
+                        </div>
+                    </form>
                 </div>
             </div>
             <?php include("../components/imageCropper.php"); ?>

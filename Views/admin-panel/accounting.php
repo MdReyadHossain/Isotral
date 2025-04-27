@@ -137,7 +137,7 @@
                                                     <span class='text-xs text-secondary mb-0'><?php echo textShortener($data['description']); ?></span>
                                                 </td>
                                                 <td class='align-middle text-center text-sm'>
-                                                    <span class='text-xs text-secondary mb-0'>BDT <?php echo $data['amount']; ?> /-</span>
+                                                    <span class='text-xs text-secondary mb-0'><?php echo currencyFormat($data['amount']); ?></span>
                                                 </td>
                                                 <td class='align-middle text-center text-sm'>
                                                     <span class='text-xs text-secondary mb-0'><?php echo dateTimeFormat($data['created_at']); ?></span>
@@ -171,6 +171,7 @@
                                 <thead>
                                     <tr>
                                         <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Transaction ID</th>
+                                        <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Transaction by</th>
                                         <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Source</th>
                                         <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Destination</th>
                                         <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Amount</th>
@@ -186,6 +187,17 @@
                                                 <td class='align-middle text-center text-sm'>
                                                     <span class='text-xs text-secondary mb-0'><?php echo $data['trans_id']; ?></span>
                                                 </td>
+                                                <td>
+                                                    <div class='d-flex px-2 py-1 align-items-center'>
+                                                        <div>
+                                                            <img src='<?php echo $data['image_url']; ?>' alt='Profile Image' class='avatar avatar-sm me-3'>
+                                                        </div>
+                                                        <div class='d-flex flex-column justify-content-center'>
+                                                            <h6 class='mb-0 text-sm'><?php echo $data['name']; ?></h6>
+                                                            <a href='mailto:<?php echo $data['email']; ?>' class='text-xs text-secondary mb-0'><?php echo $data['email']; ?></a>
+                                                        </div>
+                                                    </div>
+                                                </td>
                                                 <td class='align-middle text-center text-sm'>
                                                     <span class='text-xs text-secondary mb-0'><?php echo $data['source']; ?></span>
                                                 </td>
@@ -193,7 +205,7 @@
                                                     <span class='text-xs text-secondary mb-0'><?php echo $data['vault_source']; ?></span>
                                                 </td>
                                                 <td class='align-middle text-center text-sm'>
-                                                    <span class='text-xs text-secondary mb-0'>BDT <?php echo $data['amount']; ?> /-</span>
+                                                    <span class='text-xs text-secondary mb-0'><?php echo currencyFormat($data['amount']); ?></span>
                                                 </td>
                                                 <td class='align-middle text-center'>
                                                     <?php if ($data['trans_status'] == true) { ?>

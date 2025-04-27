@@ -32,6 +32,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     $_SESSION["name"] = $user["name"];
                     $_SESSION["email"] = $user["email"];
                     $_SESSION["phone"] = $user["phone"];
+                    $_SESSION["password"] = $user["password"];
                     $_SESSION["address"] = $user["address"];
                     $_SESSION["website"] = $user["website"];
                     $_SESSION["facebook_url"] = $user["facebook_url"];

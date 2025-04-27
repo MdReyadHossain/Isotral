@@ -1,3 +1,17 @@
+<?php
+function generateUserUrl($id)
+{
+    $encodedId = base64_encode($id);
+    $scheme = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ? "https" : "http";
+    $host = $_SERVER['HTTP_HOST']; // includes port if non-default
+
+    $origin = $scheme . "://" . $host;
+    return $origin . "/Views/public/digital-card.php?query=$encodedId";
+}
+
+
+?>
+
 <div class="container-xxl py-5">
     <div class="container">
         <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
@@ -17,6 +31,9 @@
                                 <a class="btn btn-sm-square btn-primary mx-1" href="<?php echo $admin['linkedin_url']; ?>"><i class="fab fa-linkedin"></i></a>
                                 <a class="btn btn-sm-square btn-primary mx-1" href="mailto:<?php echo $admin['email']; ?>">
                                     <i class="fas fa-envelope"></i>
+                                </a>
+                                <a class="btn btn-sm-square btn-primary mx-1" href="<?php echo generateUserUrl($admin['id']); ?>">
+                                    <i class="fa-solid fa-id-card"></i>
                                 </a>
                             </div>
                         </div>
@@ -40,6 +57,9 @@
                                 <a class="btn btn-sm-square btn-primary mx-1" href="<?php echo $admin['linkedin_url']; ?>"><i class="fab fa-linkedin"></i></a>
                                 <a class="btn btn-sm-square btn-primary mx-1" href="mailto:<?php echo $admin['email']; ?>">
                                     <i class="fas fa-envelope"></i>
+                                </a>
+                                <a class="btn btn-sm-square btn-primary mx-1" href="<?php echo generateUserUrl($admin['id']); ?>">
+                                    <i class="fa-solid fa-id-card"></i>
                                 </a>
                             </div>
                         </div>

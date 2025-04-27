@@ -165,6 +165,73 @@
             document.location.reload();
         }
     }
+
+    function searchMember(form) {
+        const url = form.action;
+        const key = form.search.value;
+
+        if (key != "") {
+            axios.get(url + "?member=" + key)
+                .then((response) => {
+                    document.getElementById("member").innerHTML = response.data;
+                })
+                .catch((error) => console.log("Error: " + error));
+        } else {
+            document.location.href = "dashboard#member";
+            document.location.reload();
+        }
+    }
+
+    function oldPass(pass) {
+        if (pass == "") {
+            document.getElementById("old-pass").innerHTML = "";
+            return;
+        } else {
+            axios.post("../../Controllers/admin/checkPasswordController", `pass=${pass}`, {
+                    headers: {
+                        'Content-Type': 'application/x-www-form-urlencoded'
+                    }
+                })
+                .then((response) => {
+                    document.getElementById("old-pass").innerHTML = response.data;
+                })
+                .catch((error) => console.log("Error: " + error));
+        }
+    }
+
+    function newPass(pass) {
+        let newPass = document.getElementById("new-pass");
+        let conPass = document.getElementById("con-pass");
+
+        let passError = document.getElementById("con-pass-error");
+
+        if (conPass.value == "" || pass == "")
+            passError.innerHTML = "";
+        else if (conPass.value != "" && pass != "" && pass == conPass.value) {
+            passError.innerHTML = "<i class='fas fa-check'></i> Matched";
+            passError.classList = "text-sm font-weight-bold text-success";
+        } else if (conPass.value != "" || pass != conPass.value) {
+            passError.innerHTML = "<i class='fas fa-times'></i> Wrong";
+            passError.classList = "text-sm font-weight-bold text-danger";
+        }
+    }
+
+    function confirmPass(pass) {
+        let newPass = document.getElementById("new-pass");
+        let conPass = document.getElementById("con-pass");
+
+        let passError = document.getElementById("con-pass-error");
+
+        if (newPass.value == "" || pass == "")
+            passError.innerHTML = "";
+        else if (newPass.value != "" && pass != "" && pass == newPass.value) {
+            passError.innerHTML = "<i class='fas fa-check'></i> Matched";
+            passError.classList = "text-sm font-weight-bold text-success";
+        } else if (newPass.value != "" || pass != newPass.value) {
+            passError.innerHTML = "<i class='fas fa-times'></i> Wrong";
+            passError.classList = "text-sm font-weight-bold text-danger";
+        }
+    }
 </script>
 </body>
 

@@ -32,11 +32,25 @@
                             <a class="dropdown-item border-radius-md" href="profile">
                                 <div class="d-flex">
                                     <div class="my-auto">
-                                        <i class="ni ni-single-02 text-sm opacity-10 border-radius-sm me-3"></i>
+                                        <i class="ni ni-single-02 text-success text-sm opacity-10 border-radius-sm me-3"></i>
                                     </div>
                                     <div class="d-flex flex-column justify-content-center">
                                         <h6 class="text-sm font-weight-normal">
                                             <span class="text-dark font-weight-bold">Profile</span>
+                                        </h6>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="">
+                            <a class="dropdown-item border-radius-md" href="profile#change-password">
+                                <div class="d-flex">
+                                    <div class="my-auto">
+                                        <i class="fa-solid fa-key text-sm opacity-10 border-radius-sm me-3"></i>
+                                    </div>
+                                    <div class="d-flex flex-column justify-content-center">
+                                        <h6 class="text-sm font-weight-normal">
+                                            <span class="text-dark font-weight-bold">Change Password</span>
                                         </h6>
                                     </div>
                                 </div>
