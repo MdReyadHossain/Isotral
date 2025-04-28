@@ -117,11 +117,6 @@ if ($query) {
                 <div class="cover-img card card-profile">
                     <img src="../../asset/img/isotral-cover.jpg" alt="Image placeholder" class="card-img-top">
                     <div class="profile-image row justify-content-center">
-                        <!-- <div class="share-info" onclick="copyToClipboard()">
-                            <div class="p-2">
-                                <i class="fa-solid fa-square-share-nodes"></i>
-                            </div>
-                        </div> -->
                         <div class="col-4 col-lg-4 order-lg-2">
                             <div class="mt-n4 mt-lg-n6 mb-4 mb-lg-0">
                                 <label class="label">
@@ -131,8 +126,8 @@ if ($query) {
                         </div>
                     </div>
                     <div class="card-body pt-0">
-                        <div class="text-center mt-4">
-                            <div class="mt-4">
+                        <div class="text-center mb-4">
+                            <div class="">
                                 <?php echo $user["profession"] ?>
                             </div>
                             <h5 class="mb-0">
@@ -142,7 +137,7 @@ if ($query) {
                                 <i class="ni education_hat"></i> <?php echo $user["title"] ?>
                             </div>
                         </div>
-                        <div class="m-4">
+                        <div class="">
                             <div class="h6 font-weight-300">
                                 <a href="mailto:<?php echo $user["email"] ?>" target="_blank">
                                     <div class="d-flex align-items-center gap-2">
@@ -213,9 +208,14 @@ if ($query) {
                                             </div>
                                         </a>
                                     </div>
+                                    <button id="add-contact" class="btn btn-primary w-100 mt-4">
+                                        <div class="p-2">
+                                            Add To Contact
+                                        </div>
+                                    </button>
                                 </div>
                                 </div>
-                                <div class="mt-4 text-center">
+                                <div class="text-center">
                                     <div class="mb-2 text-sm text-lighter">Powered By <a href="../../">Isotral</a></div>
                                 </div>
                         </div>
@@ -238,7 +238,49 @@ if ($query) {
 
     <!--   Core JS Files   -->
     <script>
-        document.querySelector('.share-info').addEventListener('touchstart', copyToClipboard);
+        document.getElementById("add-contact").addEventListener("click", function() {
+            const user = <?php echo json_encode($user) ?>;
+            const firstName = user.name;
+            const fullName = `${firstName}`;
+            const companyName = "Isotral";
+            const designation = user.profession;
+            const phone = user.phone;
+            const email = user.email;
+
+            const addressLine1 = user.address;
+
+            const facebookLink = user.facebook_url;
+            const linkedInLink = user.linkedin_url;
+            const imageUrl = user.image_url; // Added vCard image URL
+
+            let vcard = "";
+            vcard += "BEGIN:VCARD\n";
+            vcard += "VERSION:3.0\n";
+            vcard += `N:${firstName};;;;\n`;
+            vcard += `FN:${fullName}\n`;
+            vcard += `ORG:${companyName}\n`;
+            vcard += `TITLE:${designation}\n`;
+            vcard += `TEL;TYPE=WORK,VOICE:${phone}\n`;
+            vcard += `EMAIL;TYPE=WORK:${email}\n`;
+            vcard += `ADR;TYPE=WORK:;;${addressLine1};;;;\n`;
+            vcard += `URL:${facebookLink}\n`;
+            vcard += `URL:${linkedInLink}\n`;
+            vcard += `PHOTO;VALUE=URL:${imageUrl}\n`; // Added vCard image
+            vcard += "END:VCARD";
+
+            const blob = new Blob([vcard], {
+                type: "text/vcard"
+            });
+            const url = URL.createObjectURL(blob);
+
+            const a = document.createElement("a");
+            a.href = url;
+            a.download = `${fullName}.vcf`;
+            document.body.appendChild(a);
+            a.click();
+            a.remove();
+            URL.revokeObjectURL(url);
+        });
 
         function showSnackbar(message) {
             var snackbar = document.getElementById("snackbar");
