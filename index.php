@@ -10,6 +10,12 @@ $superAdmins = $db->query("SELECT * FROM user WHERE type = 'SUPER_ADMIN' ORDER B
 <head>
     <meta charset="utf-8">
     <title>Isotral</title>
+    <meta property="og:title" content="Isotral" />
+    <meta property="og:url" content="https://isotral.kesug.com/" />
+    <meta property="og:description" content="Envision the future" />
+    <meta property="og:image" content="./asset/logo/Isotral-favicon.png" />
+    <meta property="og:type" content="website" />
+
     <link href="./asset/logo/Isotral-favicon.png" rel="icon">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="isotral, blue dot, isotral truth network" name="keywords">

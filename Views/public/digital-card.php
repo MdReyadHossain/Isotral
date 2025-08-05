@@ -16,6 +16,13 @@ if ($query) {
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <meta property="og:title" content="<?php echo $user["name"] ?> - <?php echo $user["profession"] ?>" />
+    <meta property="og:url" content="https://isotral.kesug.com/Views/public/digital-card?query=<?php echo urlencode($_GET['query']); ?>" />
+    <meta property="og:description" content="Powered by Isotral" />
+    <meta property="og:image" content="<?php echo $user["image_url"] ?>" />
+    <meta property="og:type" content="website" />
+
     <link rel="icon" type="image/png" href="<?php echo $user["image_url"] ?>">
     <title>
         <?php echo $user["name"] ?> - <?php echo $user["profession"] ?>
