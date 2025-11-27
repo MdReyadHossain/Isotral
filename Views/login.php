@@ -36,53 +36,53 @@ else if (isset($_SESSION["member"]))
         } ?>
     </div>
     <div class="cont">
-        <form class="form sign-in" action="../Controllers/user/join.controller.php" method="POST">
-            <h2>Join with us</h2>
+        <form class="form sign-in" action="../Controllers/loginController.php" method="POST">
+            <h2>Login to portal</h2>
             <label>
-                <span>Name *</span>
-                <input type="text" autocomplete="off" name="name" required />
+                <span>Email</span>
+                <input type="email" name="email" required />
             </label>
             <label>
-                <span>Phone Number</span>
-                <input type="text" autocomplete="off" name="phone" />
+                <span>Password</span>
+                <input type="password" name="password" required />
             </label>
-            <label>
-                <span>Email *</span>
-                <input type="email" autocomplete="off" name="email" required />
-            </label>
-            <label>
-                <span>New Password *</span>
-                <input type="password" autocomplete="off" name="password" required />
-            </label>
-            <button type="submit" class="submit">Join</button>
+            <p class="forgot-pass">Forgot password?</p>
+            <button type="submit" class="submit">Login</button>
         </form>
         <div class="sub-cont">
             <div class="img">
-                <div class="img__text m--up">
+                <div class="img__text m--in">
                     <h2>Welcome</h2>
                     <p>Give us some details and join with us!</p>
                 </div>
-                <div class="img__text m--in">
+                <div class="img__text m--up">
                     <h2>One of us?</h2>
                     <p>If you already our member, just Login. We've missed you!</p>
                 </div>
                 <div class="img__btn">
-                    <span class="m--up">Login</span>
-                    <span class="m--in">Join</span>
+                    <span class="m--up">Join</span>
+                    <span class="m--in">Login</span>
                 </div>
             </div>
-            <form class="form sign-up" action="../Controllers/loginController.php" method="POST">
-                <h2>Login to portal</h2>
+            <form class="form sign-up" action="../Controllers/user/join.controller.php" method="POST">
+                <h2>Join with us</h2>
                 <label>
-                    <span>Email</span>
-                    <input type="email" name="email" required />
+                    <span>Name *</span>
+                    <input type="text" autocomplete="off" name="name" required />
                 </label>
                 <label>
-                    <span>Password</span>
-                    <input type="password" name="password" required />
+                    <span>Phone Number</span>
+                    <input type="text" autocomplete="off" name="phone" />
                 </label>
-                <p class="forgot-pass">Forgot password?</p>
-                <button type="submit" class="submit">Login</button>
+                <label>
+                    <span>Email *</span>
+                    <input type="email" autocomplete="off" name="email" required />
+                </label>
+                <label>
+                    <span>New Password *</span>
+                    <input type="password" autocomplete="off" name="password" required />
+                </label>
+                <button type="submit" class="submit">Join</button>
             </form>
         </div>
     </div>

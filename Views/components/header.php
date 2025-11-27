@@ -2,8 +2,8 @@
 require "../Models/dbConnect.php";
 $db = connect();
 $isotral = $db->query("SELECT * FROM admin WHERE name = 'isotral'")->fetch_assoc();
-$admins = $db->query("SELECT * FROM user WHERE type = 'ADMIN' ORDER BY priority");
-$superAdmins = $db->query("SELECT * FROM user WHERE type = 'SUPER_ADMIN' ORDER BY priority");
+$admins = $db->query("SELECT * FROM user WHERE type = 'ADMIN' AND status = 'ACTIVE' ORDER BY priority");
+$superAdmins = $db->query("SELECT * FROM user WHERE type = 'SUPER_ADMIN' AND status = 'ACTIVE' ORDER BY priority");
 ?>
 
 <!DOCTYPE html>
