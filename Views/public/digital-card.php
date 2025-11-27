@@ -122,7 +122,7 @@ if ($query) {
         <div class="d-flex justify-content-center">
             <div class="col-md-4">
                 <div class="cover-img card card-profile">
-                    <img src="../../asset/img/isotral-cover.jpg" alt="Image placeholder" class="card-img-top">
+                    <img src="../../asset/img/SquadroSoft.png" alt="Image placeholder" class="card-img-top">
                     <div class="profile-image row justify-content-center">
                         <div class="col-4 col-lg-4 order-lg-2">
                             <div class="mt-n4 mt-lg-n6 mb-4 mb-lg-0">
